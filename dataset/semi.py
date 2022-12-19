@@ -13,7 +13,14 @@ from torchvision import transforms
 
 
 class SemiDataset(Dataset):
-    def __init__(self, name, root, mode, size=None, id_path=None, nsample=None):
+
+    def __init__(self,
+                 name,
+                 root,
+                 mode,
+                 size=None,
+                 id_path=None,
+                 nsample=None):
         self.name = name
         self.root = root
         self.mode = mode
@@ -32,8 +39,13 @@ class SemiDataset(Dataset):
 
     def __getitem__(self, item):
         id = self.ids[item]
-        img = Image.open(os.path.join(self.root, id.split(' ')[0])).convert('RGB')
-        mask = Image.fromarray(np.array(Image.open(os.path.join(self.root, id.split(' ')[1]))))
+        img = Image.open(os.path.join(self.root,
+                                      id.split(' ')[0])).convert('RGB')
+        mask = np.array(Image.open(os.path.join(self.root, id.split(' ')[1])))
+
+        if self.name == 'loveda':
+            mask = (mask - 1).astype(np.uint8)
+        mask = Image.fromarray(mask)
 
         if self.mode == 'val':
             img, mask = normalize(img, mask)
@@ -69,7 +81,8 @@ class SemiDataset(Dataset):
         mask = torch.from_numpy(np.array(mask)).long()
         ignore_mask[mask == 254] = 255
 
-        return normalize(img_w), img_s1, img_s2, ignore_mask, cutmix_box1, cutmix_box2
+        return normalize(
+            img_w), img_s1, img_s2, ignore_mask, cutmix_box1, cutmix_box2
 
     def __len__(self):
         return len(self.ids)

@@ -1,0 +1,22 @@
+# arguments for dataset
+dataset: loveda
+nclass: 7
+crop_size: 512
+data_root: /data1/loveDA/
+
+# arguments for training
+epochs: 80
+batch_size: 4
+lr: 0.001  # 2GPUs
+lr_multi: 10.0
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.95
+
+# arguments for model
+backbone: resnet50
+multi_grid: False
+replace_stride_with_dilation: [False, True, True]
+dilations: [6, 12, 18]
