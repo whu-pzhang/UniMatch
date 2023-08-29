@@ -2,7 +2,7 @@
 dataset: potsdam
 nclass: 6
 crop_size: 512
-data_root: /data1/potsdam/
+data_root: data/potsdam/
 
 # arguments for training
 epochs: 80
