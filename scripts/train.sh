@@ -2,14 +2,18 @@
 now=$(date +"%Y%m%d_%H%M%S")
 
 # modify these augments if you want to try other datasets, splits or methods
-# dataset: ['pascal', 'cityscapes', 'coco']
+# dataset: ['pascal', 'cityscapes', 'coco', 'potsdam', 'loveda']
 # method: ['unimatch', 'fixmatch', 'supervised']
 # exp: just for specifying the 'save_path'
 # split: ['92', '1_16', 'u2pl_1_16', ...]. Please check directory './splits/$dataset' for concrete splits
-dataset='pascal'
+# dataset='pascal'
+# method='unimatch'
+# exp='r101'
+# split='732'
+dataset='potsdam'
 method='unimatch'
-exp='r101'
-split='732'
+exp='r50'
+split='1_32'
 
 config=configs/${dataset}.yaml
 labeled_id_path=splits/$dataset/$split/labeled.txt

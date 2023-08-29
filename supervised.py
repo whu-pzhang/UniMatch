@@ -20,8 +20,10 @@ from util.ohem import ProbOhemCrossEntropy2d
 from util.utils import count_params, AverageMeter, intersectionAndUnion, init_log
 from util.dist_helper import setup_distributed
 
-
-parser = argparse.ArgumentParser(description='Revisiting Weak-to-Strong Consistency in Semi-Supervised Semantic Segmentation')
+parser = argparse.ArgumentParser(
+    description=
+    'Revisiting Weak-to-Strong Consistency in Semi-Supervised Semantic Segmentation'
+)
 parser.add_argument('--config', type=str, required=True)
 parser.add_argument('--labeled-id-path', type=str, required=True)
 parser.add_argument('--unlabeled-id-path', type=str, default=None)
@@ -38,7 +40,7 @@ def evaluate(model, loader, mode, cfg):
 
     with torch.no_grad():
         for img, mask, id in loader:
-            
+
             img = img.cuda()
 
             if mode == 'sliding_window':
@@ -49,8 +51,10 @@ def evaluate(model, loader, mode, cfg):
                 while row < h:
                     col = 0
                     while col < w:
-                        pred = model(img[:, :, row: min(h, row + grid), col: min(w, col + grid)])
-                        final[:, :, row: min(h, row + grid), col: min(w, col + grid)] += pred.softmax(dim=1)
+                        pred = model(img[:, :, row:min(h, row + grid),
+                                         col:min(w, col + grid)])
+                        final[:, :, row:min(h, row + grid),
+                              col:min(w, col + grid)] += pred.softmax(dim=1)
                         col += int(grid * 2 / 3)
                     row += int(grid * 2 / 3)
 
@@ -59,9 +63,12 @@ def evaluate(model, loader, mode, cfg):
             else:
                 if mode == 'center_crop':
                     h, w = img.shape[-2:]
-                    start_h, start_w = (h - cfg['crop_size']) // 2, (w - cfg['crop_size']) // 2
-                    img = img[:, :, start_h:start_h + cfg['crop_size'], start_w:start_w + cfg['crop_size']]
-                    mask = mask[:, start_h:start_h + cfg['crop_size'], start_w:start_w + cfg['crop_size']]
+                    start_h, start_w = (h - cfg['crop_size']) // 2, (
+                        w - cfg['crop_size']) // 2
+                    img = img[:, :, start_h:start_h + cfg['crop_size'],
+                              start_w:start_w + cfg['crop_size']]
+                    mask = mask[:, start_h:start_h + cfg['crop_size'],
+                                start_w:start_w + cfg['crop_size']]
 
                 pred = model(img).argmax(dim=1)
 
@@ -98,9 +105,9 @@ def main():
     if rank == 0:
         all_args = {**cfg, **vars(args), 'ngpus': world_size}
         logger.info('{}\n'.format(pprint.pformat(all_args)))
-        
+
         writer = SummaryWriter(args.save_path)
-        
+
         os.makedirs(args.save_path, exist_ok=True)
 
     cudnn.enabled = True
@@ -110,32 +117,59 @@ def main():
     if rank == 0:
         logger.info('Total params: {:.1f}M\n'.format(count_params(model)))
 
-    optimizer = SGD([{'params': model.backbone.parameters(), 'lr': cfg['lr']},
-                     {'params': [param for name, param in model.named_parameters() if 'backbone' not in name],
-                      'lr': cfg['lr'] * cfg['lr_multi']}], lr=cfg['lr'], momentum=0.9, weight_decay=1e-4)
+    optimizer = SGD([{
+        'params': model.backbone.parameters(),
+        'lr': cfg['lr']
+    }, {
+        'params': [
+            param for name, param in model.named_parameters()
+            if 'backbone' not in name
+        ],
+        'lr':
+        cfg['lr'] * cfg['lr_multi']
+    }],
+                    lr=cfg['lr'],
+                    momentum=0.9,
+                    weight_decay=1e-4)
 
     local_rank = int(os.environ["LOCAL_RANK"])
     model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
     model.cuda(local_rank)
-    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], broadcast_buffers=False,
-                                                      output_device=local_rank, find_unused_parameters=False)
+    model = torch.nn.parallel.DistributedDataParallel(
+        model,
+        device_ids=[local_rank],
+        broadcast_buffers=False,
+        output_device=local_rank,
+        find_unused_parameters=False)
 
     if cfg['criterion']['name'] == 'CELoss':
-        criterion = nn.CrossEntropyLoss(**cfg['criterion']['kwargs']).cuda(local_rank)
+        criterion = nn.CrossEntropyLoss(
+            **cfg['criterion']['kwargs']).cuda(local_rank)
     elif cfg['criterion']['name'] == 'OHEM':
-        criterion = ProbOhemCrossEntropy2d(**cfg['criterion']['kwargs']).cuda(local_rank)
+        criterion = ProbOhemCrossEntropy2d(
+            **cfg['criterion']['kwargs']).cuda(local_rank)
     else:
-        raise NotImplementedError('%s criterion is not implemented' % cfg['criterion']['name'])
+        raise NotImplementedError('%s criterion is not implemented' %
+                                  cfg['criterion']['name'])
 
-    trainset = SemiDataset(cfg['dataset'], cfg['data_root'], 'train_l', cfg['crop_size'], args.labeled_id_path)
+    trainset = SemiDataset(cfg['dataset'], cfg['data_root'], 'train_l',
+                           cfg['crop_size'], args.labeled_id_path)
     valset = SemiDataset(cfg['dataset'], cfg['data_root'], 'val')
 
     trainsampler = torch.utils.data.distributed.DistributedSampler(trainset)
-    trainloader = DataLoader(trainset, batch_size=cfg['batch_size'],
-                             pin_memory=True, num_workers=1, drop_last=True, sampler=trainsampler)
+    trainloader = DataLoader(trainset,
+                             batch_size=cfg['batch_size'],
+                             pin_memory=True,
+                             num_workers=1,
+                             drop_last=True,
+                             sampler=trainsampler)
     valsampler = torch.utils.data.distributed.DistributedSampler(valset)
-    valloader = DataLoader(valset, batch_size=1, pin_memory=True, num_workers=1,
-                           drop_last=False, sampler=valsampler)
+    valloader = DataLoader(valset,
+                           batch_size=1,
+                           pin_memory=True,
+                           num_workers=1,
+                           drop_last=False,
+                           sampler=valsampler)
 
     iters = 0
     total_iters = len(trainloader) * cfg['epochs']
@@ -148,14 +182,16 @@ def main():
         optimizer.load_state_dict(checkpoint['optimizer'])
         epoch = checkpoint['epoch']
         previous_best = checkpoint['previous_best']
-        
+
         if rank == 0:
-            logger.info('************ Load from checkpoint at epoch %i\n' % epoch)
-    
+            logger.info('************ Load from checkpoint at epoch %i\n' %
+                        epoch)
+
     for epoch in range(epoch + 1, cfg['epochs']):
         if rank == 0:
-            logger.info('===========> Epoch: {:}, LR: {:.5f}, Previous best: {:.2f}'.format(
-                epoch, optimizer.param_groups[0]['lr'], previous_best))
+            logger.info(
+                '===========> Epoch: {:}, LR: {:.5f}, Previous best: {:.2f}'.
+                format(epoch, optimizer.param_groups[0]['lr'], previous_best))
 
         model.train()
         total_loss = AverageMeter()
@@ -169,7 +205,7 @@ def main():
             pred = model(img)
 
             loss = criterion(pred, mask)
-            
+
             torch.distributed.barrier()
 
             optimizer.zero_grad()
@@ -179,29 +215,36 @@ def main():
             total_loss.update(loss.item())
 
             iters = epoch * len(trainloader) + i
-            lr = cfg['lr'] * (1 - iters / total_iters) ** 0.9
+            lr = cfg['lr'] * (1 - iters / total_iters)**0.9
             optimizer.param_groups[0]["lr"] = lr
             optimizer.param_groups[1]["lr"] = lr * cfg['lr_multi']
 
             if rank == 0:
                 writer.add_scalar('train/loss_all', loss.item(), iters)
                 writer.add_scalar('train/loss_x', loss.item(), iters)
-            
-            if (i % (max(2, len(trainloader) // 8)) == 0) and (rank == 0):
-                logger.info('Iters: {:}, Total loss: {:.3f}'.format(i, total_loss.avg))
 
-        eval_mode = 'sliding_window' if cfg['dataset'] == 'cityscapes' else 'original'
+            if (i % (max(2, len(trainloader) // 8)) == 0) and (rank == 0):
+                logger.info('Iters: {:}, Total loss: {:.3f}'.format(
+                    i, total_loss.avg))
+
+        eval_mode = 'sliding_window' if cfg[
+            'dataset'] == 'cityscapes' else 'original'
         mIoU, iou_class = evaluate(model, valloader, eval_mode, cfg)
 
         if rank == 0:
             for (cls_idx, iou) in enumerate(iou_class):
                 logger.info('***** Evaluation ***** >>>> Class [{:} {:}] '
-                            'IoU: {:.2f}'.format(cls_idx, CLASSES[cfg['dataset']][cls_idx], iou))
-            logger.info('***** Evaluation {} ***** >>>> MeanIoU: {:.2f}\n'.format(eval_mode, mIoU))
-            
+                            'IoU: {:.2f}'.format(
+                                cls_idx, CLASSES[cfg['dataset']][cls_idx],
+                                iou))
+            logger.info(
+                '***** Evaluation {} ***** >>>> MeanIoU: {:.2f}\n'.format(
+                    eval_mode, mIoU))
+
             writer.add_scalar('eval/mIoU', mIoU, epoch)
             for i, iou in enumerate(iou_class):
-                writer.add_scalar('eval/%s_IoU' % (CLASSES[cfg['dataset']][i]), iou, epoch)
+                writer.add_scalar('eval/%s_IoU' % (CLASSES[cfg['dataset']][i]),
+                                  iou, epoch)
 
         is_best = mIoU > previous_best
         previous_best = max(mIoU, previous_best)
@@ -214,7 +257,8 @@ def main():
             }
             torch.save(checkpoint, os.path.join(args.save_path, 'latest.pth'))
             if is_best:
-                torch.save(checkpoint, os.path.join(args.save_path, 'best.pth'))
+                torch.save(checkpoint, os.path.join(args.save_path,
+                                                    'best.pth'))
 
 
 if __name__ == '__main__':

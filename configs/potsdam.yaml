@@ -1,8 +1,8 @@
 # arguments for dataset
-dataset: loveda
-nclass: 7
+dataset: potsdam
+nclass: 6
 crop_size: 512
-data_root: data/loveDA/
+data_root: /data1/potsdam/
 
 # arguments for training
 epochs: 80

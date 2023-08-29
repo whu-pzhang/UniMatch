@@ -71,6 +71,20 @@ Results are obtained by DeepLabv3+ based on Xception-65.
 | **UniMatch (Ours)** | [**31.9**](https://drive.google.com/file/d/1kFgg0SGLzS7SJI8sYPQKGLnw8G060kjz/view?usp=sharing) | [**38.9**](https://drive.google.com/file/d/1scx1FanOcmaut8eVESLaSx7-DiT5JJA6/view?usp=sharing) | [**44.4**](https://drive.google.com/file/d/1oojVn12tgPW_m94tAOU5YYVZ7xJJitCj/view?usp=sharing) | [**48.2**](https://drive.google.com/file/d/1tI1AZ8rY6hYQrs216iz2NmlAfLl8f1uP/view?usp=sharing) | [**49.8**](https://drive.google.com/file/d/1hwRr0IIhdeKH2JYO--iOLl5y69sJ0UYm/view?usp=sharing) |
 
 
+### loveDA
+
+|    Method    | 1/4 (630) |       | full  |
+| :----------: | :-------: | :---: | :---: |
+| SupBaseline  |           |       |       |
+| **UniMatch** | **51.04** |       |       |
+
+### Potsdam
+
+|    Method    | 1/32(108) | 1/16(216) | 1/8(432)  | 1/4 (864) | 1/2(1728) | full  |
+| :----------: | :-------: | :-------: | :-------: | :-------: | --------- | :---: |
+| SupBaseline  |   60.04   |   66.68   |   69.93   |   72.36   |           |       |
+| **UniMatch** | **69.98** | **74.47** | **75.58** | **75.67** |           |       |
+
 ### More Scenarios
 
 We also apply our UniMatch in the scenarios of semi-supervised **remote sensing change detection** and **medical image segmentation**, achieving tremendous improvements over previous methods:
