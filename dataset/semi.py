@@ -42,7 +42,7 @@ class SemiDataset(Dataset):
                                       id.split(' ')[0])).convert('RGB')
         mask = np.array(Image.open(os.path.join(self.root, id.split(' ')[1])))
 
-        if self.name in ['lovada', 'potsdam']:
+        if self.name in ['loveda', 'potsdam']:
             # reduce zero label
             mask[mask == 0] = 255
             mask = mask - 1
