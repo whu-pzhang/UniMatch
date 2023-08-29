@@ -34,7 +34,10 @@ dataset_infos = {
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument('dataset_name', type=str, default='potsdam')
+    parser.add_argument('dataset_name',
+                        type=str,
+                        default='potsdam',
+                        choices=['potsdam', 'loveda', 'isaid'])
     parser.add_argument('ratio', type=float, default=0.25)
     parser.add_argument('--seed', type=int, default=42)
 
