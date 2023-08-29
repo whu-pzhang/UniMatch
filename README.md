@@ -73,12 +73,16 @@ Results are obtained by DeepLabv3+ based on Xception-65.
 
 ### loveDA
 
+Results are obtanined by DeepLabV3+ based on ResNet-50
+
 |    Method    | 1/4 (630) | 1/2 (1261) | full  |
 | :----------: | :-------: | :--------: | :---: |
 | SupBaseline  |   48.24   |            |       |
 | **UniMatch** | **51.04** |            |       |
 
 ### Potsdam
+
+Results are obtanined by DeepLabV3+ based on ResNet-50
 
 |    Method    | 1/32 (108) | 1/16 (216) | 1/8 (432) | 1/4 (864) | 1/2 (1728) | full  |
 | :----------: | :--------: | :--------: | :-------: | :-------: | ---------- | :---: |
