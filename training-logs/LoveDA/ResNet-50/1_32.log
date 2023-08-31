@@ -1,0 +1,1553 @@
+[2023-08-30 15:18:30,635][    INFO] {'backbone': 'resnet50',
+ 'batch_size': 2,
+ 'conf_thresh': 0.95,
+ 'config': 'configs/loveda.yaml',
+ 'criterion': {'kwargs': {'ignore_index': 255}, 'name': 'CELoss'},
+ 'crop_size': 512,
+ 'data_root': 'data/loveDA/',
+ 'dataset': 'loveda',
+ 'dilations': [6, 12, 18],
+ 'epochs': 80,
+ 'labeled_id_path': 'splits/loveda/1_32/labeled.txt',
+ 'local_rank': 0,
+ 'lr': 0.001,
+ 'lr_multi': 10.0,
+ 'model': 'deeplabv3plus',
+ 'nclass': 7,
+ 'ngpus': 2,
+ 'port': 29503,
+ 'replace_stride_with_dilation': [False, False, True],
+ 'save_path': 'exp/loveda/unimatch/r50/1_32',
+ 'unlabeled_id_path': 'splits/loveda/1_32/unlabeled.txt'}
+
+[2023-08-30 15:18:31,041][    INFO] Total params: 40.5M
+
+[2023-08-30 15:18:32,470][    INFO] ===========> Epoch: 0, LR: 0.00100, Previous best: 0.00
+[2023-08-30 15:18:48,713][    INFO] Iters: 0, Total loss: 0.967, Loss x: 1.933, Loss s: 0.000, Loss w_fp: 0.000, Mask ratio: 0.000
+[2023-08-30 15:19:33,623][    INFO] Iters: 76, Total loss: 0.689, Loss x: 1.370, Loss s: 0.014, Loss w_fp: 0.002, Mask ratio: 0.021
+[2023-08-30 15:20:19,175][    INFO] Iters: 152, Total loss: 0.668, Loss x: 1.323, Loss s: 0.025, Loss w_fp: 0.004, Mask ratio: 0.030
+[2023-08-30 15:21:04,371][    INFO] Iters: 228, Total loss: 0.613, Loss x: 1.207, Loss s: 0.035, Loss w_fp: 0.003, Mask ratio: 0.057
+[2023-08-30 15:21:49,778][    INFO] Iters: 304, Total loss: 0.593, Loss x: 1.165, Loss s: 0.040, Loss w_fp: 0.003, Mask ratio: 0.063
+[2023-08-30 15:22:35,226][    INFO] Iters: 380, Total loss: 0.561, Loss x: 1.100, Loss s: 0.040, Loss w_fp: 0.003, Mask ratio: 0.066
+[2023-08-30 15:23:21,090][    INFO] Iters: 456, Total loss: 0.540, Loss x: 1.058, Loss s: 0.039, Loss w_fp: 0.003, Mask ratio: 0.069
+[2023-08-30 15:24:06,890][    INFO] Iters: 532, Total loss: 0.526, Loss x: 1.029, Loss s: 0.042, Loss w_fp: 0.003, Mask ratio: 0.080
+[2023-08-30 15:24:52,924][    INFO] Iters: 608, Total loss: 0.508, Loss x: 0.992, Loss s: 0.044, Loss w_fp: 0.004, Mask ratio: 0.085
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 35.64
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 47.31
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 29.54
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 47.51
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 15.02
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 25.50
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 43.56
+[2023-08-30 15:26:19,402][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 34.87
+
+[2023-08-30 15:26:20,124][    INFO] ===========> Epoch: 1, LR: 0.00099, Previous best: 34.87
+[2023-08-30 15:26:21,196][    INFO] Iters: 0, Total loss: 0.248, Loss x: 0.483, Loss s: 0.025, Loss w_fp: 0.002, Mask ratio: 0.015
+[2023-08-30 15:27:07,231][    INFO] Iters: 76, Total loss: 0.372, Loss x: 0.714, Loss s: 0.054, Loss w_fp: 0.004, Mask ratio: 0.093
+[2023-08-30 15:27:53,420][    INFO] Iters: 152, Total loss: 0.347, Loss x: 0.663, Loss s: 0.058, Loss w_fp: 0.004, Mask ratio: 0.100
+[2023-08-30 15:28:39,590][    INFO] Iters: 228, Total loss: 0.363, Loss x: 0.697, Loss s: 0.053, Loss w_fp: 0.003, Mask ratio: 0.101
+[2023-08-30 15:29:25,951][    INFO] Iters: 304, Total loss: 0.357, Loss x: 0.686, Loss s: 0.051, Loss w_fp: 0.004, Mask ratio: 0.106
+[2023-08-30 15:30:12,307][    INFO] Iters: 380, Total loss: 0.358, Loss x: 0.689, Loss s: 0.051, Loss w_fp: 0.004, Mask ratio: 0.110
+[2023-08-30 15:30:58,847][    INFO] Iters: 456, Total loss: 0.355, Loss x: 0.680, Loss s: 0.058, Loss w_fp: 0.004, Mask ratio: 0.125
+[2023-08-30 15:31:45,387][    INFO] Iters: 532, Total loss: 0.353, Loss x: 0.673, Loss s: 0.059, Loss w_fp: 0.005, Mask ratio: 0.129
+[2023-08-30 15:32:31,895][    INFO] Iters: 608, Total loss: 0.347, Loss x: 0.663, Loss s: 0.058, Loss w_fp: 0.005, Mask ratio: 0.129
+[2023-08-30 15:33:50,539][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 39.56
+[2023-08-30 15:33:50,539][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 46.50
+[2023-08-30 15:33:50,539][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 43.56
+[2023-08-30 15:33:50,540][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 54.28
+[2023-08-30 15:33:50,540][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.02
+[2023-08-30 15:33:50,540][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 27.70
+[2023-08-30 15:33:50,540][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.94
+[2023-08-30 15:33:50,540][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 39.51
+
+[2023-08-30 15:33:52,392][    INFO] ===========> Epoch: 2, LR: 0.00098, Previous best: 39.51
+[2023-08-30 15:33:53,408][    INFO] Iters: 0, Total loss: 0.176, Loss x: 0.315, Loss s: 0.073, Loss w_fp: 0.001, Mask ratio: 0.254
+[2023-08-30 15:34:39,915][    INFO] Iters: 76, Total loss: 0.325, Loss x: 0.604, Loss s: 0.085, Loss w_fp: 0.008, Mask ratio: 0.163
+[2023-08-30 15:35:26,527][    INFO] Iters: 152, Total loss: 0.313, Loss x: 0.584, Loss s: 0.076, Loss w_fp: 0.008, Mask ratio: 0.149
+[2023-08-30 15:36:13,280][    INFO] Iters: 228, Total loss: 0.312, Loss x: 0.583, Loss s: 0.074, Loss w_fp: 0.009, Mask ratio: 0.145
+[2023-08-30 15:36:59,891][    INFO] Iters: 304, Total loss: 0.316, Loss x: 0.592, Loss s: 0.073, Loss w_fp: 0.008, Mask ratio: 0.154
+[2023-08-30 15:37:46,499][    INFO] Iters: 380, Total loss: 0.310, Loss x: 0.580, Loss s: 0.072, Loss w_fp: 0.008, Mask ratio: 0.155
+[2023-08-30 15:38:33,122][    INFO] Iters: 456, Total loss: 0.323, Loss x: 0.605, Loss s: 0.076, Loss w_fp: 0.008, Mask ratio: 0.158
+[2023-08-30 15:39:19,933][    INFO] Iters: 532, Total loss: 0.325, Loss x: 0.608, Loss s: 0.075, Loss w_fp: 0.008, Mask ratio: 0.161
+[2023-08-30 15:40:06,782][    INFO] Iters: 608, Total loss: 0.320, Loss x: 0.597, Loss s: 0.076, Loss w_fp: 0.008, Mask ratio: 0.164
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 38.85
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 40.78
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 44.30
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 49.96
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.83
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 26.88
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 44.56
+[2023-08-30 15:41:25,542][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 38.17
+
+[2023-08-30 15:41:26,518][    INFO] ===========> Epoch: 3, LR: 0.00097, Previous best: 39.51
+[2023-08-30 15:41:27,561][    INFO] Iters: 0, Total loss: 0.275, Loss x: 0.534, Loss s: 0.027, Loss w_fp: 0.005, Mask ratio: 0.031
+[2023-08-30 15:42:14,213][    INFO] Iters: 76, Total loss: 0.311, Loss x: 0.580, Loss s: 0.074, Loss w_fp: 0.010, Mask ratio: 0.160
+[2023-08-30 15:43:00,988][    INFO] Iters: 152, Total loss: 0.296, Loss x: 0.548, Loss s: 0.079, Loss w_fp: 0.009, Mask ratio: 0.177
+[2023-08-30 15:43:47,876][    INFO] Iters: 228, Total loss: 0.294, Loss x: 0.538, Loss s: 0.089, Loss w_fp: 0.010, Mask ratio: 0.181
+[2023-08-30 15:44:34,854][    INFO] Iters: 304, Total loss: 0.294, Loss x: 0.541, Loss s: 0.085, Loss w_fp: 0.009, Mask ratio: 0.172
+[2023-08-30 15:45:21,806][    INFO] Iters: 380, Total loss: 0.291, Loss x: 0.534, Loss s: 0.088, Loss w_fp: 0.009, Mask ratio: 0.175
+[2023-08-30 15:46:08,692][    INFO] Iters: 456, Total loss: 0.291, Loss x: 0.531, Loss s: 0.092, Loss w_fp: 0.010, Mask ratio: 0.179
+[2023-08-30 15:46:55,764][    INFO] Iters: 532, Total loss: 0.284, Loss x: 0.518, Loss s: 0.091, Loss w_fp: 0.009, Mask ratio: 0.187
+[2023-08-30 15:47:42,687][    INFO] Iters: 608, Total loss: 0.279, Loss x: 0.508, Loss s: 0.091, Loss w_fp: 0.010, Mask ratio: 0.194
+[2023-08-30 15:49:02,361][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 42.30
+[2023-08-30 15:49:02,361][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 48.52
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 43.07
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 54.63
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.50
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 31.46
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.10
+[2023-08-30 15:49:02,362][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 41.94
+
+[2023-08-30 15:49:04,154][    INFO] ===========> Epoch: 4, LR: 0.00095, Previous best: 41.94
+[2023-08-30 15:49:05,240][    INFO] Iters: 0, Total loss: 0.217, Loss x: 0.385, Loss s: 0.075, Loss w_fp: 0.022, Mask ratio: 0.565
+[2023-08-30 15:49:52,025][    INFO] Iters: 76, Total loss: 0.239, Loss x: 0.428, Loss s: 0.087, Loss w_fp: 0.011, Mask ratio: 0.263
+[2023-08-30 15:50:38,787][    INFO] Iters: 152, Total loss: 0.247, Loss x: 0.442, Loss s: 0.091, Loss w_fp: 0.012, Mask ratio: 0.250
+[2023-08-30 15:51:25,747][    INFO] Iters: 228, Total loss: 0.243, Loss x: 0.436, Loss s: 0.088, Loss w_fp: 0.012, Mask ratio: 0.241
+[2023-08-30 15:52:12,714][    INFO] Iters: 304, Total loss: 0.245, Loss x: 0.439, Loss s: 0.091, Loss w_fp: 0.012, Mask ratio: 0.243
+[2023-08-30 15:52:59,779][    INFO] Iters: 380, Total loss: 0.247, Loss x: 0.437, Loss s: 0.101, Loss w_fp: 0.011, Mask ratio: 0.247
+[2023-08-30 15:53:46,818][    INFO] Iters: 456, Total loss: 0.246, Loss x: 0.440, Loss s: 0.093, Loss w_fp: 0.010, Mask ratio: 0.239
+[2023-08-30 15:54:33,775][    INFO] Iters: 532, Total loss: 0.240, Loss x: 0.430, Loss s: 0.091, Loss w_fp: 0.010, Mask ratio: 0.242
+[2023-08-30 15:55:20,894][    INFO] Iters: 608, Total loss: 0.239, Loss x: 0.428, Loss s: 0.091, Loss w_fp: 0.011, Mask ratio: 0.238
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.62
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 40.50
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 36.75
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 60.94
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.63
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.27
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.09
+[2023-08-30 15:56:40,362][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 41.69
+
+[2023-08-30 15:56:41,347][    INFO] ===========> Epoch: 5, LR: 0.00094, Previous best: 41.94
+[2023-08-30 15:56:42,414][    INFO] Iters: 0, Total loss: 0.272, Loss x: 0.408, Loss s: 0.256, Loss w_fp: 0.016, Mask ratio: 0.353
+[2023-08-30 15:57:29,320][    INFO] Iters: 76, Total loss: 0.237, Loss x: 0.430, Loss s: 0.081, Loss w_fp: 0.008, Mask ratio: 0.219
+[2023-08-30 15:58:16,223][    INFO] Iters: 152, Total loss: 0.241, Loss x: 0.435, Loss s: 0.084, Loss w_fp: 0.009, Mask ratio: 0.250
+[2023-08-30 15:59:03,216][    INFO] Iters: 228, Total loss: 0.238, Loss x: 0.428, Loss s: 0.086, Loss w_fp: 0.010, Mask ratio: 0.242
+[2023-08-30 15:59:50,327][    INFO] Iters: 304, Total loss: 0.236, Loss x: 0.421, Loss s: 0.092, Loss w_fp: 0.010, Mask ratio: 0.246
+[2023-08-30 16:00:37,525][    INFO] Iters: 380, Total loss: 0.233, Loss x: 0.417, Loss s: 0.089, Loss w_fp: 0.009, Mask ratio: 0.245
+[2023-08-30 16:01:24,551][    INFO] Iters: 456, Total loss: 0.229, Loss x: 0.408, Loss s: 0.089, Loss w_fp: 0.010, Mask ratio: 0.243
+[2023-08-30 16:02:11,675][    INFO] Iters: 532, Total loss: 0.234, Loss x: 0.415, Loss s: 0.093, Loss w_fp: 0.011, Mask ratio: 0.248
+[2023-08-30 16:02:58,806][    INFO] Iters: 608, Total loss: 0.233, Loss x: 0.412, Loss s: 0.096, Loss w_fp: 0.011, Mask ratio: 0.248
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 34.96
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 45.96
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 44.63
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 53.12
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.15
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 29.59
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.04
+[2023-08-30 16:04:17,761][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 40.49
+
+[2023-08-30 16:04:18,675][    INFO] ===========> Epoch: 6, LR: 0.00093, Previous best: 41.94
+[2023-08-30 16:04:19,738][    INFO] Iters: 0, Total loss: 0.082, Loss x: 0.142, Loss s: 0.038, Loss w_fp: 0.005, Mask ratio: 0.102
+[2023-08-30 16:05:06,546][    INFO] Iters: 76, Total loss: 0.223, Loss x: 0.405, Loss s: 0.073, Loss w_fp: 0.007, Mask ratio: 0.249
+[2023-08-30 16:05:53,605][    INFO] Iters: 152, Total loss: 0.230, Loss x: 0.416, Loss s: 0.080, Loss w_fp: 0.009, Mask ratio: 0.250
+[2023-08-30 16:06:40,602][    INFO] Iters: 228, Total loss: 0.226, Loss x: 0.403, Loss s: 0.090, Loss w_fp: 0.009, Mask ratio: 0.258
+[2023-08-30 16:07:27,681][    INFO] Iters: 304, Total loss: 0.223, Loss x: 0.395, Loss s: 0.089, Loss w_fp: 0.010, Mask ratio: 0.262
+[2023-08-30 16:08:14,713][    INFO] Iters: 380, Total loss: 0.220, Loss x: 0.391, Loss s: 0.087, Loss w_fp: 0.011, Mask ratio: 0.260
+[2023-08-30 16:09:01,898][    INFO] Iters: 456, Total loss: 0.218, Loss x: 0.385, Loss s: 0.089, Loss w_fp: 0.011, Mask ratio: 0.262
+[2023-08-30 16:09:49,012][    INFO] Iters: 532, Total loss: 0.217, Loss x: 0.382, Loss s: 0.092, Loss w_fp: 0.011, Mask ratio: 0.265
+[2023-08-30 16:10:36,086][    INFO] Iters: 608, Total loss: 0.214, Loss x: 0.374, Loss s: 0.095, Loss w_fp: 0.012, Mask ratio: 0.272
+[2023-08-30 16:11:55,207][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 40.51
+[2023-08-30 16:11:55,207][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 47.87
+[2023-08-30 16:11:55,207][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.81
+[2023-08-30 16:11:55,208][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 60.42
+[2023-08-30 16:11:55,208][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.61
+[2023-08-30 16:11:55,208][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 29.21
+[2023-08-30 16:11:55,208][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 55.00
+[2023-08-30 16:11:55,208][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 43.49
+
+[2023-08-30 16:11:57,099][    INFO] ===========> Epoch: 7, LR: 0.00092, Previous best: 43.49
+[2023-08-30 16:11:58,108][    INFO] Iters: 0, Total loss: 0.130, Loss x: 0.240, Loss s: 0.037, Loss w_fp: 0.003, Mask ratio: 0.186
+[2023-08-30 16:12:45,012][    INFO] Iters: 76, Total loss: 0.199, Loss x: 0.337, Loss s: 0.112, Loss w_fp: 0.011, Mask ratio: 0.298
+[2023-08-30 16:13:32,085][    INFO] Iters: 152, Total loss: 0.206, Loss x: 0.354, Loss s: 0.105, Loss w_fp: 0.011, Mask ratio: 0.286
+[2023-08-30 16:14:19,022][    INFO] Iters: 228, Total loss: 0.204, Loss x: 0.348, Loss s: 0.107, Loss w_fp: 0.011, Mask ratio: 0.285
+[2023-08-30 16:15:06,110][    INFO] Iters: 304, Total loss: 0.201, Loss x: 0.343, Loss s: 0.105, Loss w_fp: 0.012, Mask ratio: 0.279
+[2023-08-30 16:15:53,308][    INFO] Iters: 380, Total loss: 0.203, Loss x: 0.346, Loss s: 0.106, Loss w_fp: 0.012, Mask ratio: 0.275
+[2023-08-30 16:16:40,469][    INFO] Iters: 456, Total loss: 0.206, Loss x: 0.353, Loss s: 0.104, Loss w_fp: 0.013, Mask ratio: 0.282
+[2023-08-30 16:17:27,720][    INFO] Iters: 532, Total loss: 0.203, Loss x: 0.350, Loss s: 0.102, Loss w_fp: 0.013, Mask ratio: 0.284
+[2023-08-30 16:18:14,843][    INFO] Iters: 608, Total loss: 0.202, Loss x: 0.346, Loss s: 0.102, Loss w_fp: 0.013, Mask ratio: 0.286
+[2023-08-30 16:19:34,137][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 31.21
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.28
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.26
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 51.27
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.24
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 24.85
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.91
+[2023-08-30 16:19:34,138][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 39.72
+
+[2023-08-30 16:19:35,032][    INFO] ===========> Epoch: 8, LR: 0.00091, Previous best: 43.49
+[2023-08-30 16:19:36,106][    INFO] Iters: 0, Total loss: 0.694, Loss x: 1.374, Loss s: 0.024, Loss w_fp: 0.003, Mask ratio: 0.071
+[2023-08-30 16:20:23,105][    INFO] Iters: 76, Total loss: 0.214, Loss x: 0.374, Loss s: 0.096, Loss w_fp: 0.010, Mask ratio: 0.248
+[2023-08-30 16:21:10,130][    INFO] Iters: 152, Total loss: 0.210, Loss x: 0.365, Loss s: 0.100, Loss w_fp: 0.011, Mask ratio: 0.270
+[2023-08-30 16:21:57,257][    INFO] Iters: 228, Total loss: 0.204, Loss x: 0.356, Loss s: 0.092, Loss w_fp: 0.010, Mask ratio: 0.279
+[2023-08-30 16:22:44,309][    INFO] Iters: 304, Total loss: 0.199, Loss x: 0.349, Loss s: 0.090, Loss w_fp: 0.009, Mask ratio: 0.279
+[2023-08-30 16:23:31,382][    INFO] Iters: 380, Total loss: 0.202, Loss x: 0.349, Loss s: 0.097, Loss w_fp: 0.011, Mask ratio: 0.286
+[2023-08-30 16:24:18,570][    INFO] Iters: 456, Total loss: 0.203, Loss x: 0.349, Loss s: 0.101, Loss w_fp: 0.012, Mask ratio: 0.295
+[2023-08-30 16:25:05,740][    INFO] Iters: 532, Total loss: 0.203, Loss x: 0.352, Loss s: 0.098, Loss w_fp: 0.012, Mask ratio: 0.292
+[2023-08-30 16:25:52,959][    INFO] Iters: 608, Total loss: 0.202, Loss x: 0.349, Loss s: 0.098, Loss w_fp: 0.012, Mask ratio: 0.296
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 34.51
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 42.97
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.02
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 62.43
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.20
+[2023-08-30 16:27:12,257][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 27.41
+[2023-08-30 16:27:12,258][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.91
+[2023-08-30 16:27:12,258][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 40.78
+
+[2023-08-30 16:27:13,163][    INFO] ===========> Epoch: 9, LR: 0.00090, Previous best: 43.49
+[2023-08-30 16:27:14,174][    INFO] Iters: 0, Total loss: 0.043, Loss x: 0.080, Loss s: 0.006, Loss w_fp: 0.005, Mask ratio: 0.086
+[2023-08-30 16:28:01,081][    INFO] Iters: 76, Total loss: 0.193, Loss x: 0.327, Loss s: 0.109, Loss w_fp: 0.010, Mask ratio: 0.305
+[2023-08-30 16:28:48,286][    INFO] Iters: 152, Total loss: 0.196, Loss x: 0.325, Loss s: 0.120, Loss w_fp: 0.012, Mask ratio: 0.310
+[2023-08-30 16:29:35,366][    INFO] Iters: 228, Total loss: 0.187, Loss x: 0.312, Loss s: 0.114, Loss w_fp: 0.011, Mask ratio: 0.322
+[2023-08-30 16:30:22,546][    INFO] Iters: 304, Total loss: 0.183, Loss x: 0.306, Loss s: 0.107, Loss w_fp: 0.012, Mask ratio: 0.327
+[2023-08-30 16:31:09,684][    INFO] Iters: 380, Total loss: 0.189, Loss x: 0.317, Loss s: 0.107, Loss w_fp: 0.012, Mask ratio: 0.324
+[2023-08-30 16:31:56,859][    INFO] Iters: 456, Total loss: 0.189, Loss x: 0.317, Loss s: 0.108, Loss w_fp: 0.012, Mask ratio: 0.326
+[2023-08-30 16:32:43,996][    INFO] Iters: 532, Total loss: 0.188, Loss x: 0.317, Loss s: 0.108, Loss w_fp: 0.012, Mask ratio: 0.323
+[2023-08-30 16:33:31,242][    INFO] Iters: 608, Total loss: 0.189, Loss x: 0.318, Loss s: 0.108, Loss w_fp: 0.012, Mask ratio: 0.320
+[2023-08-30 16:34:50,757][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 41.78
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.84
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.95
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 57.41
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 28.38
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 30.85
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.60
+[2023-08-30 16:34:50,758][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 43.97
+
+[2023-08-30 16:34:52,572][    INFO] ===========> Epoch: 10, LR: 0.00089, Previous best: 43.97
+[2023-08-30 16:34:53,603][    INFO] Iters: 0, Total loss: 0.124, Loss x: 0.218, Loss s: 0.038, Loss w_fp: 0.022, Mask ratio: 0.130
+[2023-08-30 16:35:40,593][    INFO] Iters: 76, Total loss: 0.163, Loss x: 0.274, Loss s: 0.091, Loss w_fp: 0.014, Mask ratio: 0.277
+[2023-08-30 16:36:27,761][    INFO] Iters: 152, Total loss: 0.165, Loss x: 0.280, Loss s: 0.084, Loss w_fp: 0.016, Mask ratio: 0.316
+[2023-08-30 16:37:14,857][    INFO] Iters: 228, Total loss: 0.169, Loss x: 0.279, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.316
+[2023-08-30 16:38:01,887][    INFO] Iters: 304, Total loss: 0.172, Loss x: 0.286, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.324
+[2023-08-30 16:38:49,006][    INFO] Iters: 380, Total loss: 0.174, Loss x: 0.292, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.325
+[2023-08-30 16:39:36,244][    INFO] Iters: 456, Total loss: 0.176, Loss x: 0.296, Loss s: 0.100, Loss w_fp: 0.013, Mask ratio: 0.326
+[2023-08-30 16:40:23,396][    INFO] Iters: 532, Total loss: 0.179, Loss x: 0.299, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.320
+[2023-08-30 16:41:10,604][    INFO] Iters: 608, Total loss: 0.179, Loss x: 0.300, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.320
+[2023-08-30 16:42:30,118][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 37.72
+[2023-08-30 16:42:30,118][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.02
+[2023-08-30 16:42:30,118][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.55
+[2023-08-30 16:42:30,119][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 61.24
+[2023-08-30 16:42:30,119][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 25.07
+[2023-08-30 16:42:30,119][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 30.55
+[2023-08-30 16:42:30,119][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.32
+[2023-08-30 16:42:30,119][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.07
+
+[2023-08-30 16:42:32,106][    INFO] ===========> Epoch: 11, LR: 0.00088, Previous best: 44.07
+[2023-08-30 16:42:33,128][    INFO] Iters: 0, Total loss: 0.048, Loss x: 0.062, Loss s: 0.056, Loss w_fp: 0.011, Mask ratio: 0.437
+[2023-08-30 16:43:20,037][    INFO] Iters: 76, Total loss: 0.181, Loss x: 0.308, Loss s: 0.097, Loss w_fp: 0.013, Mask ratio: 0.326
+[2023-08-30 16:44:07,022][    INFO] Iters: 152, Total loss: 0.177, Loss x: 0.296, Loss s: 0.102, Loss w_fp: 0.012, Mask ratio: 0.320
+[2023-08-30 16:44:54,199][    INFO] Iters: 228, Total loss: 0.174, Loss x: 0.287, Loss s: 0.109, Loss w_fp: 0.012, Mask ratio: 0.335
+[2023-08-30 16:45:41,356][    INFO] Iters: 304, Total loss: 0.178, Loss x: 0.290, Loss s: 0.119, Loss w_fp: 0.013, Mask ratio: 0.340
+[2023-08-30 16:46:28,526][    INFO] Iters: 380, Total loss: 0.179, Loss x: 0.296, Loss s: 0.111, Loss w_fp: 0.012, Mask ratio: 0.333
+[2023-08-30 16:47:15,872][    INFO] Iters: 456, Total loss: 0.179, Loss x: 0.295, Loss s: 0.111, Loss w_fp: 0.012, Mask ratio: 0.333
+[2023-08-30 16:48:03,320][    INFO] Iters: 532, Total loss: 0.179, Loss x: 0.296, Loss s: 0.113, Loss w_fp: 0.012, Mask ratio: 0.333
+[2023-08-30 16:48:50,647][    INFO] Iters: 608, Total loss: 0.179, Loss x: 0.296, Loss s: 0.111, Loss w_fp: 0.012, Mask ratio: 0.341
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 32.86
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.64
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.55
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 57.18
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.22
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 29.13
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.23
+[2023-08-30 16:50:09,835][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 42.26
+
+[2023-08-30 16:50:10,822][    INFO] ===========> Epoch: 12, LR: 0.00086, Previous best: 44.07
+[2023-08-30 16:50:11,818][    INFO] Iters: 0, Total loss: 0.150, Loss x: 0.286, Loss s: 0.019, Loss w_fp: 0.008, Mask ratio: 0.547
+[2023-08-30 16:50:58,978][    INFO] Iters: 76, Total loss: 0.167, Loss x: 0.285, Loss s: 0.086, Loss w_fp: 0.012, Mask ratio: 0.358
+[2023-08-30 16:51:46,289][    INFO] Iters: 152, Total loss: 0.171, Loss x: 0.282, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.364
+[2023-08-30 16:52:33,541][    INFO] Iters: 228, Total loss: 0.167, Loss x: 0.276, Loss s: 0.101, Loss w_fp: 0.012, Mask ratio: 0.355
+[2023-08-30 16:53:20,863][    INFO] Iters: 304, Total loss: 0.168, Loss x: 0.278, Loss s: 0.104, Loss w_fp: 0.013, Mask ratio: 0.362
+[2023-08-30 16:54:08,133][    INFO] Iters: 380, Total loss: 0.170, Loss x: 0.279, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.357
+[2023-08-30 16:54:55,566][    INFO] Iters: 456, Total loss: 0.169, Loss x: 0.278, Loss s: 0.110, Loss w_fp: 0.012, Mask ratio: 0.355
+[2023-08-30 16:55:42,814][    INFO] Iters: 532, Total loss: 0.169, Loss x: 0.277, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.361
+[2023-08-30 16:56:30,113][    INFO] Iters: 608, Total loss: 0.168, Loss x: 0.276, Loss s: 0.108, Loss w_fp: 0.013, Mask ratio: 0.365
+[2023-08-30 16:57:49,507][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 38.68
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.39
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 44.29
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.78
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.03
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.66
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.26
+[2023-08-30 16:57:49,508][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 43.44
+
+[2023-08-30 16:57:50,359][    INFO] ===========> Epoch: 13, LR: 0.00085, Previous best: 44.07
+[2023-08-30 16:57:51,365][    INFO] Iters: 0, Total loss: 0.286, Loss x: 0.234, Loss s: 0.536, Loss w_fp: 0.141, Mask ratio: 0.590
+[2023-08-30 16:58:38,348][    INFO] Iters: 76, Total loss: 0.166, Loss x: 0.270, Loss s: 0.110, Loss w_fp: 0.016, Mask ratio: 0.417
+[2023-08-30 16:59:25,563][    INFO] Iters: 152, Total loss: 0.164, Loss x: 0.271, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.406
+[2023-08-30 17:00:12,843][    INFO] Iters: 228, Total loss: 0.159, Loss x: 0.258, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.392
+[2023-08-30 17:01:00,167][    INFO] Iters: 304, Total loss: 0.160, Loss x: 0.260, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.387
+[2023-08-30 17:01:47,424][    INFO] Iters: 380, Total loss: 0.165, Loss x: 0.265, Loss s: 0.115, Loss w_fp: 0.014, Mask ratio: 0.397
+[2023-08-30 17:02:34,614][    INFO] Iters: 456, Total loss: 0.167, Loss x: 0.268, Loss s: 0.116, Loss w_fp: 0.015, Mask ratio: 0.388
+[2023-08-30 17:03:21,916][    INFO] Iters: 532, Total loss: 0.165, Loss x: 0.267, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.388
+[2023-08-30 17:04:09,099][    INFO] Iters: 608, Total loss: 0.166, Loss x: 0.268, Loss s: 0.114, Loss w_fp: 0.015, Mask ratio: 0.388
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 46.58
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.25
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 45.87
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.97
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 12.56
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.14
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.95
+[2023-08-30 17:05:28,497][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 43.19
+
+[2023-08-30 17:05:29,490][    INFO] ===========> Epoch: 14, LR: 0.00084, Previous best: 44.07
+[2023-08-30 17:05:30,553][    INFO] Iters: 0, Total loss: 0.091, Loss x: 0.151, Loss s: 0.048, Loss w_fp: 0.015, Mask ratio: 0.479
+[2023-08-30 17:06:17,585][    INFO] Iters: 76, Total loss: 0.146, Loss x: 0.230, Loss s: 0.108, Loss w_fp: 0.013, Mask ratio: 0.391
+[2023-08-30 17:07:04,762][    INFO] Iters: 152, Total loss: 0.148, Loss x: 0.234, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.372
+[2023-08-30 17:07:52,084][    INFO] Iters: 228, Total loss: 0.151, Loss x: 0.242, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.394
+[2023-08-30 17:08:39,379][    INFO] Iters: 304, Total loss: 0.155, Loss x: 0.248, Loss s: 0.109, Loss w_fp: 0.015, Mask ratio: 0.397
+[2023-08-30 17:09:26,633][    INFO] Iters: 380, Total loss: 0.153, Loss x: 0.244, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.401
+[2023-08-30 17:10:13,836][    INFO] Iters: 456, Total loss: 0.153, Loss x: 0.241, Loss s: 0.114, Loss w_fp: 0.015, Mask ratio: 0.399
+[2023-08-30 17:11:01,097][    INFO] Iters: 532, Total loss: 0.153, Loss x: 0.245, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.400
+[2023-08-30 17:11:48,365][    INFO] Iters: 608, Total loss: 0.155, Loss x: 0.248, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.400
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.38
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.28
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.41
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.17
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.13
+[2023-08-30 17:13:08,100][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 31.94
+[2023-08-30 17:13:08,101][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.07
+[2023-08-30 17:13:08,101][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.20
+
+[2023-08-30 17:13:09,970][    INFO] ===========> Epoch: 15, LR: 0.00083, Previous best: 46.20
+[2023-08-30 17:13:10,982][    INFO] Iters: 0, Total loss: 0.109, Loss x: 0.185, Loss s: 0.058, Loss w_fp: 0.008, Mask ratio: 0.526
+[2023-08-30 17:13:57,917][    INFO] Iters: 76, Total loss: 0.143, Loss x: 0.228, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.413
+[2023-08-30 17:14:45,124][    INFO] Iters: 152, Total loss: 0.147, Loss x: 0.235, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.416
+[2023-08-30 17:15:32,444][    INFO] Iters: 228, Total loss: 0.149, Loss x: 0.241, Loss s: 0.099, Loss w_fp: 0.013, Mask ratio: 0.406
+[2023-08-30 17:16:19,802][    INFO] Iters: 304, Total loss: 0.149, Loss x: 0.241, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.395
+[2023-08-30 17:17:07,064][    INFO] Iters: 380, Total loss: 0.150, Loss x: 0.241, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.398
+[2023-08-30 17:17:54,249][    INFO] Iters: 456, Total loss: 0.152, Loss x: 0.241, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.400
+[2023-08-30 17:18:41,507][    INFO] Iters: 532, Total loss: 0.152, Loss x: 0.244, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.401
+[2023-08-30 17:19:28,740][    INFO] Iters: 608, Total loss: 0.155, Loss x: 0.247, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.403
+[2023-08-30 17:20:48,215][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 39.23
+[2023-08-30 17:20:48,215][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.89
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.47
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 61.38
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.05
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.84
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.42
+[2023-08-30 17:20:48,216][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.33
+
+[2023-08-30 17:20:49,175][    INFO] ===========> Epoch: 16, LR: 0.00082, Previous best: 46.20
+[2023-08-30 17:20:50,152][    INFO] Iters: 0, Total loss: 0.231, Loss x: 0.409, Loss s: 0.092, Loss w_fp: 0.015, Mask ratio: 0.581
+[2023-08-30 17:21:37,204][    INFO] Iters: 76, Total loss: 0.135, Loss x: 0.224, Loss s: 0.080, Loss w_fp: 0.011, Mask ratio: 0.402
+[2023-08-30 17:22:24,327][    INFO] Iters: 152, Total loss: 0.140, Loss x: 0.228, Loss s: 0.092, Loss w_fp: 0.012, Mask ratio: 0.398
+[2023-08-30 17:23:11,590][    INFO] Iters: 228, Total loss: 0.149, Loss x: 0.237, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.409
+[2023-08-30 17:23:58,731][    INFO] Iters: 304, Total loss: 0.152, Loss x: 0.238, Loss s: 0.118, Loss w_fp: 0.014, Mask ratio: 0.420
+[2023-08-30 17:24:46,049][    INFO] Iters: 380, Total loss: 0.151, Loss x: 0.239, Loss s: 0.113, Loss w_fp: 0.014, Mask ratio: 0.410
+[2023-08-30 17:25:33,301][    INFO] Iters: 456, Total loss: 0.151, Loss x: 0.240, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.411
+[2023-08-30 17:26:20,447][    INFO] Iters: 532, Total loss: 0.151, Loss x: 0.242, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.411
+[2023-08-30 17:27:07,583][    INFO] Iters: 608, Total loss: 0.152, Loss x: 0.241, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.417
+[2023-08-30 17:28:26,991][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.76
+[2023-08-30 17:28:26,991][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.06
+[2023-08-30 17:28:26,991][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.96
+[2023-08-30 17:28:26,992][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.71
+[2023-08-30 17:28:26,992][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 14.26
+[2023-08-30 17:28:26,992][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.17
+[2023-08-30 17:28:26,992][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.51
+[2023-08-30 17:28:26,992][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.63
+
+[2023-08-30 17:28:27,892][    INFO] ===========> Epoch: 17, LR: 0.00081, Previous best: 46.20
+[2023-08-30 17:28:28,941][    INFO] Iters: 0, Total loss: 0.073, Loss x: 0.125, Loss s: 0.039, Loss w_fp: 0.002, Mask ratio: 0.095
+[2023-08-30 17:29:16,106][    INFO] Iters: 76, Total loss: 0.151, Loss x: 0.238, Loss s: 0.115, Loss w_fp: 0.015, Mask ratio: 0.384
+[2023-08-30 17:30:03,277][    INFO] Iters: 152, Total loss: 0.150, Loss x: 0.238, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.397
+[2023-08-30 17:30:50,486][    INFO] Iters: 228, Total loss: 0.150, Loss x: 0.235, Loss s: 0.116, Loss w_fp: 0.014, Mask ratio: 0.394
+[2023-08-30 17:31:37,605][    INFO] Iters: 304, Total loss: 0.152, Loss x: 0.238, Loss s: 0.117, Loss w_fp: 0.017, Mask ratio: 0.405
+[2023-08-30 17:32:24,616][    INFO] Iters: 380, Total loss: 0.153, Loss x: 0.239, Loss s: 0.117, Loss w_fp: 0.016, Mask ratio: 0.411
+[2023-08-30 17:33:11,862][    INFO] Iters: 456, Total loss: 0.154, Loss x: 0.238, Loss s: 0.122, Loss w_fp: 0.016, Mask ratio: 0.408
+[2023-08-30 17:33:59,187][    INFO] Iters: 532, Total loss: 0.153, Loss x: 0.237, Loss s: 0.123, Loss w_fp: 0.015, Mask ratio: 0.410
+[2023-08-30 17:34:46,595][    INFO] Iters: 608, Total loss: 0.153, Loss x: 0.239, Loss s: 0.121, Loss w_fp: 0.015, Mask ratio: 0.407
+[2023-08-30 17:36:06,488][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 46.14
+[2023-08-30 17:36:06,488][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.42
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.79
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.13
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.50
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.16
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.25
+[2023-08-30 17:36:06,489][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.48
+
+[2023-08-30 17:36:07,425][    INFO] ===========> Epoch: 18, LR: 0.00080, Previous best: 46.20
+[2023-08-30 17:36:08,507][    INFO] Iters: 0, Total loss: 0.155, Loss x: 0.216, Loss s: 0.175, Loss w_fp: 0.013, Mask ratio: 0.508
+[2023-08-30 17:36:55,511][    INFO] Iters: 76, Total loss: 0.141, Loss x: 0.217, Loss s: 0.115, Loss w_fp: 0.015, Mask ratio: 0.441
+[2023-08-30 17:37:42,803][    INFO] Iters: 152, Total loss: 0.147, Loss x: 0.226, Loss s: 0.118, Loss w_fp: 0.017, Mask ratio: 0.429
+[2023-08-30 17:38:29,966][    INFO] Iters: 228, Total loss: 0.148, Loss x: 0.233, Loss s: 0.110, Loss w_fp: 0.016, Mask ratio: 0.416
+[2023-08-30 17:39:17,183][    INFO] Iters: 304, Total loss: 0.147, Loss x: 0.233, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.413
+[2023-08-30 17:40:04,445][    INFO] Iters: 380, Total loss: 0.157, Loss x: 0.252, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.412
+[2023-08-30 17:40:51,776][    INFO] Iters: 456, Total loss: 0.156, Loss x: 0.251, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.405
+[2023-08-30 17:41:38,990][    INFO] Iters: 532, Total loss: 0.153, Loss x: 0.247, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.401
+[2023-08-30 17:42:26,259][    INFO] Iters: 608, Total loss: 0.151, Loss x: 0.242, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.407
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.22
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.20
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.73
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 65.26
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.12
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.14
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.90
+[2023-08-30 17:43:45,011][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.37
+
+[2023-08-30 17:43:46,866][    INFO] ===========> Epoch: 19, LR: 0.00078, Previous best: 46.37
+[2023-08-30 17:43:47,893][    INFO] Iters: 0, Total loss: 0.142, Loss x: 0.249, Loss s: 0.068, Loss w_fp: 0.003, Mask ratio: 0.089
+[2023-08-30 17:44:34,900][    INFO] Iters: 76, Total loss: 0.148, Loss x: 0.240, Loss s: 0.102, Loss w_fp: 0.012, Mask ratio: 0.389
+[2023-08-30 17:45:22,191][    INFO] Iters: 152, Total loss: 0.147, Loss x: 0.232, Loss s: 0.111, Loss w_fp: 0.013, Mask ratio: 0.407
+[2023-08-30 17:46:09,284][    INFO] Iters: 228, Total loss: 0.144, Loss x: 0.220, Loss s: 0.125, Loss w_fp: 0.013, Mask ratio: 0.414
+[2023-08-30 17:46:56,516][    INFO] Iters: 304, Total loss: 0.143, Loss x: 0.221, Loss s: 0.119, Loss w_fp: 0.013, Mask ratio: 0.417
+[2023-08-30 17:47:43,631][    INFO] Iters: 380, Total loss: 0.141, Loss x: 0.218, Loss s: 0.117, Loss w_fp: 0.014, Mask ratio: 0.416
+[2023-08-30 17:48:30,827][    INFO] Iters: 456, Total loss: 0.142, Loss x: 0.218, Loss s: 0.118, Loss w_fp: 0.014, Mask ratio: 0.424
+[2023-08-30 17:49:18,172][    INFO] Iters: 532, Total loss: 0.144, Loss x: 0.221, Loss s: 0.119, Loss w_fp: 0.014, Mask ratio: 0.426
+[2023-08-30 17:50:05,506][    INFO] Iters: 608, Total loss: 0.145, Loss x: 0.223, Loss s: 0.118, Loss w_fp: 0.014, Mask ratio: 0.431
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 42.70
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.56
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.98
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 64.20
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.96
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.77
+[2023-08-30 17:51:25,131][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 55.09
+[2023-08-30 17:51:25,132][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.75
+
+[2023-08-30 17:51:26,173][    INFO] ===========> Epoch: 20, LR: 0.00077, Previous best: 46.37
+[2023-08-30 17:51:27,203][    INFO] Iters: 0, Total loss: 0.124, Loss x: 0.223, Loss s: 0.032, Loss w_fp: 0.016, Mask ratio: 0.250
+[2023-08-30 17:52:14,225][    INFO] Iters: 76, Total loss: 0.133, Loss x: 0.215, Loss s: 0.090, Loss w_fp: 0.013, Mask ratio: 0.427
+[2023-08-30 17:53:01,369][    INFO] Iters: 152, Total loss: 0.136, Loss x: 0.219, Loss s: 0.093, Loss w_fp: 0.013, Mask ratio: 0.410
+[2023-08-30 17:53:48,678][    INFO] Iters: 228, Total loss: 0.135, Loss x: 0.217, Loss s: 0.095, Loss w_fp: 0.013, Mask ratio: 0.419
+[2023-08-30 17:54:35,823][    INFO] Iters: 304, Total loss: 0.138, Loss x: 0.222, Loss s: 0.092, Loss w_fp: 0.015, Mask ratio: 0.429
+[2023-08-30 17:55:22,961][    INFO] Iters: 380, Total loss: 0.137, Loss x: 0.218, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.436
+[2023-08-30 17:56:10,104][    INFO] Iters: 456, Total loss: 0.140, Loss x: 0.223, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.432
+[2023-08-30 17:56:57,432][    INFO] Iters: 532, Total loss: 0.140, Loss x: 0.221, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.431
+[2023-08-30 17:57:44,599][    INFO] Iters: 608, Total loss: 0.140, Loss x: 0.220, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.430
+[2023-08-30 17:59:03,995][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 43.81
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.35
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.98
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 64.90
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 28.69
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.17
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.71
+[2023-08-30 17:59:03,996][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.80
+
+[2023-08-30 17:59:04,880][    INFO] ===========> Epoch: 21, LR: 0.00076, Previous best: 46.37
+[2023-08-30 17:59:05,860][    INFO] Iters: 0, Total loss: 0.154, Loss x: 0.290, Loss s: 0.029, Loss w_fp: 0.006, Mask ratio: 0.667
+[2023-08-30 17:59:52,737][    INFO] Iters: 76, Total loss: 0.126, Loss x: 0.198, Loss s: 0.096, Loss w_fp: 0.013, Mask ratio: 0.469
+[2023-08-30 18:00:39,767][    INFO] Iters: 152, Total loss: 0.134, Loss x: 0.208, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.470
+[2023-08-30 18:01:26,907][    INFO] Iters: 228, Total loss: 0.136, Loss x: 0.215, Loss s: 0.100, Loss w_fp: 0.013, Mask ratio: 0.459
+[2023-08-30 18:02:14,245][    INFO] Iters: 304, Total loss: 0.135, Loss x: 0.210, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.460
+[2023-08-30 18:03:01,436][    INFO] Iters: 380, Total loss: 0.136, Loss x: 0.211, Loss s: 0.110, Loss w_fp: 0.013, Mask ratio: 0.450
+[2023-08-30 18:03:48,828][    INFO] Iters: 456, Total loss: 0.137, Loss x: 0.212, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.452
+[2023-08-30 18:04:36,215][    INFO] Iters: 532, Total loss: 0.135, Loss x: 0.207, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.452
+[2023-08-30 18:05:23,337][    INFO] Iters: 608, Total loss: 0.137, Loss x: 0.210, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.453
+[2023-08-30 18:06:42,658][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.07
+[2023-08-30 18:06:42,658][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.88
+[2023-08-30 18:06:42,658][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.18
+[2023-08-30 18:06:42,658][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.90
+[2023-08-30 18:06:42,658][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.28
+[2023-08-30 18:06:42,659][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 28.30
+[2023-08-30 18:06:42,659][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 54.35
+[2023-08-30 18:06:42,659][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.14
+
+[2023-08-30 18:06:43,545][    INFO] ===========> Epoch: 22, LR: 0.00075, Previous best: 46.37
+[2023-08-30 18:06:44,553][    INFO] Iters: 0, Total loss: 0.143, Loss x: 0.262, Loss s: 0.033, Loss w_fp: 0.013, Mask ratio: 0.469
+[2023-08-30 18:07:31,534][    INFO] Iters: 76, Total loss: 0.146, Loss x: 0.234, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.496
+[2023-08-30 18:08:18,741][    INFO] Iters: 152, Total loss: 0.144, Loss x: 0.230, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.450
+[2023-08-30 18:09:05,902][    INFO] Iters: 228, Total loss: 0.142, Loss x: 0.225, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.455
+[2023-08-30 18:09:53,067][    INFO] Iters: 304, Total loss: 0.137, Loss x: 0.218, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.451
+[2023-08-30 18:10:40,218][    INFO] Iters: 380, Total loss: 0.138, Loss x: 0.219, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.452
+[2023-08-30 18:11:27,363][    INFO] Iters: 456, Total loss: 0.139, Loss x: 0.220, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.450
+[2023-08-30 18:12:14,665][    INFO] Iters: 532, Total loss: 0.138, Loss x: 0.217, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.452
+[2023-08-30 18:13:01,803][    INFO] Iters: 608, Total loss: 0.137, Loss x: 0.215, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.455
+[2023-08-30 18:14:21,543][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.63
+[2023-08-30 18:14:21,543][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.51
+[2023-08-30 18:14:21,543][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 46.67
+[2023-08-30 18:14:21,544][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 64.38
+[2023-08-30 18:14:21,544][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.23
+[2023-08-30 18:14:21,544][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.92
+[2023-08-30 18:14:21,544][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.92
+[2023-08-30 18:14:21,544][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.61
+
+[2023-08-30 18:14:22,443][    INFO] ===========> Epoch: 23, LR: 0.00074, Previous best: 46.37
+[2023-08-30 18:14:23,483][    INFO] Iters: 0, Total loss: 0.101, Loss x: 0.157, Loss s: 0.074, Loss w_fp: 0.015, Mask ratio: 0.364
+[2023-08-30 18:15:10,337][    INFO] Iters: 76, Total loss: 0.140, Loss x: 0.211, Loss s: 0.123, Loss w_fp: 0.014, Mask ratio: 0.455
+[2023-08-30 18:15:56,838][    INFO] Iters: 152, Total loss: 0.135, Loss x: 0.205, Loss s: 0.115, Loss w_fp: 0.014, Mask ratio: 0.464
+[2023-08-30 18:16:43,173][    INFO] Iters: 228, Total loss: 0.130, Loss x: 0.198, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.471
+[2023-08-30 18:17:29,422][    INFO] Iters: 304, Total loss: 0.127, Loss x: 0.194, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.472
+[2023-08-30 18:18:15,471][    INFO] Iters: 380, Total loss: 0.133, Loss x: 0.207, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.471
+[2023-08-30 18:19:01,288][    INFO] Iters: 456, Total loss: 0.135, Loss x: 0.210, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.466
+[2023-08-30 18:19:46,787][    INFO] Iters: 532, Total loss: 0.134, Loss x: 0.206, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.462
+[2023-08-30 18:20:32,100][    INFO] Iters: 608, Total loss: 0.132, Loss x: 0.203, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.461
+[2023-08-30 18:21:50,297][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.75
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.32
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.06
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 65.97
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.48
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.59
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.79
+[2023-08-30 18:21:50,298][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.85
+
+[2023-08-30 18:21:51,369][    INFO] ===========> Epoch: 24, LR: 0.00073, Previous best: 46.37
+[2023-08-30 18:21:52,375][    INFO] Iters: 0, Total loss: 0.170, Loss x: 0.305, Loss s: 0.050, Loss w_fp: 0.021, Mask ratio: 0.495
+[2023-08-30 18:22:37,455][    INFO] Iters: 76, Total loss: 0.130, Loss x: 0.203, Loss s: 0.103, Loss w_fp: 0.012, Mask ratio: 0.457
+[2023-08-30 18:23:22,452][    INFO] Iters: 152, Total loss: 0.127, Loss x: 0.195, Loss s: 0.104, Loss w_fp: 0.012, Mask ratio: 0.463
+[2023-08-30 18:24:07,479][    INFO] Iters: 228, Total loss: 0.125, Loss x: 0.194, Loss s: 0.101, Loss w_fp: 0.012, Mask ratio: 0.467
+[2023-08-30 18:24:52,434][    INFO] Iters: 304, Total loss: 0.125, Loss x: 0.193, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.471
+[2023-08-30 18:25:37,389][    INFO] Iters: 380, Total loss: 0.125, Loss x: 0.195, Loss s: 0.099, Loss w_fp: 0.013, Mask ratio: 0.465
+[2023-08-30 18:26:22,153][    INFO] Iters: 456, Total loss: 0.127, Loss x: 0.195, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.457
+[2023-08-30 18:27:07,173][    INFO] Iters: 532, Total loss: 0.126, Loss x: 0.195, Loss s: 0.102, Loss w_fp: 0.013, Mask ratio: 0.455
+[2023-08-30 18:27:52,127][    INFO] Iters: 608, Total loss: 0.129, Loss x: 0.197, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.454
+[2023-08-30 18:29:10,222][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 32.96
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.53
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.19
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 64.69
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.60
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.42
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 46.12
+[2023-08-30 18:29:10,223][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 42.93
+
+[2023-08-30 18:29:11,338][    INFO] ===========> Epoch: 25, LR: 0.00071, Previous best: 46.37
+[2023-08-30 18:29:12,304][    INFO] Iters: 0, Total loss: 0.098, Loss x: 0.177, Loss s: 0.025, Loss w_fp: 0.012, Mask ratio: 0.398
+[2023-08-30 18:29:57,048][    INFO] Iters: 76, Total loss: 0.126, Loss x: 0.193, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.470
+[2023-08-30 18:30:41,824][    INFO] Iters: 152, Total loss: 0.126, Loss x: 0.196, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.467
+[2023-08-30 18:31:26,666][    INFO] Iters: 228, Total loss: 0.126, Loss x: 0.193, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.473
+[2023-08-30 18:32:11,597][    INFO] Iters: 304, Total loss: 0.127, Loss x: 0.194, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.475
+[2023-08-30 18:32:56,422][    INFO] Iters: 380, Total loss: 0.129, Loss x: 0.194, Loss s: 0.113, Loss w_fp: 0.014, Mask ratio: 0.479
+[2023-08-30 18:33:41,219][    INFO] Iters: 456, Total loss: 0.129, Loss x: 0.195, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.478
+[2023-08-30 18:34:26,025][    INFO] Iters: 532, Total loss: 0.127, Loss x: 0.192, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.484
+[2023-08-30 18:35:10,882][    INFO] Iters: 608, Total loss: 0.128, Loss x: 0.193, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.485
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 44.21
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.41
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.90
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 65.44
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 14.53
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.03
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.28
+[2023-08-30 18:36:29,606][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.83
+
+[2023-08-30 18:36:30,617][    INFO] ===========> Epoch: 26, LR: 0.00070, Previous best: 46.37
+[2023-08-30 18:36:31,589][    INFO] Iters: 0, Total loss: 0.082, Loss x: 0.112, Loss s: 0.099, Loss w_fp: 0.004, Mask ratio: 0.229
+[2023-08-30 18:37:16,207][    INFO] Iters: 76, Total loss: 0.113, Loss x: 0.171, Loss s: 0.098, Loss w_fp: 0.013, Mask ratio: 0.461
+[2023-08-30 18:38:01,034][    INFO] Iters: 152, Total loss: 0.123, Loss x: 0.186, Loss s: 0.107, Loss w_fp: 0.012, Mask ratio: 0.449
+[2023-08-30 18:38:45,737][    INFO] Iters: 228, Total loss: 0.127, Loss x: 0.194, Loss s: 0.108, Loss w_fp: 0.013, Mask ratio: 0.458
+[2023-08-30 18:39:30,517][    INFO] Iters: 304, Total loss: 0.126, Loss x: 0.193, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.460
+[2023-08-30 18:40:15,375][    INFO] Iters: 380, Total loss: 0.128, Loss x: 0.197, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.453
+[2023-08-30 18:41:00,067][    INFO] Iters: 456, Total loss: 0.128, Loss x: 0.197, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.453
+[2023-08-30 18:41:44,828][    INFO] Iters: 532, Total loss: 0.127, Loss x: 0.196, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.451
+[2023-08-30 18:42:29,564][    INFO] Iters: 608, Total loss: 0.128, Loss x: 0.198, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.451
+[2023-08-30 18:43:47,390][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.26
+[2023-08-30 18:43:47,390][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.67
+[2023-08-30 18:43:47,390][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.07
+[2023-08-30 18:43:47,391][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.56
+[2023-08-30 18:43:47,391][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 27.10
+[2023-08-30 18:43:47,391][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.02
+[2023-08-30 18:43:47,391][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.68
+[2023-08-30 18:43:47,391][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.19
+
+[2023-08-30 18:43:49,711][    INFO] ===========> Epoch: 27, LR: 0.00069, Previous best: 47.19
+[2023-08-30 18:43:50,673][    INFO] Iters: 0, Total loss: 0.258, Loss x: 0.465, Loss s: 0.061, Loss w_fp: 0.040, Mask ratio: 0.501
+[2023-08-30 18:44:35,226][    INFO] Iters: 76, Total loss: 0.124, Loss x: 0.194, Loss s: 0.095, Loss w_fp: 0.012, Mask ratio: 0.486
+[2023-08-30 18:45:19,910][    INFO] Iters: 152, Total loss: 0.124, Loss x: 0.190, Loss s: 0.103, Loss w_fp: 0.012, Mask ratio: 0.473
+[2023-08-30 18:46:04,560][    INFO] Iters: 228, Total loss: 0.123, Loss x: 0.187, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.466
+[2023-08-30 18:46:49,366][    INFO] Iters: 304, Total loss: 0.122, Loss x: 0.184, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.469
+[2023-08-30 18:47:33,983][    INFO] Iters: 380, Total loss: 0.122, Loss x: 0.186, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.467
+[2023-08-30 18:48:18,678][    INFO] Iters: 456, Total loss: 0.123, Loss x: 0.187, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.467
+[2023-08-30 18:49:03,386][    INFO] Iters: 532, Total loss: 0.123, Loss x: 0.186, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.463
+[2023-08-30 18:49:48,202][    INFO] Iters: 608, Total loss: 0.123, Loss x: 0.186, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.465
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 36.07
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.72
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.35
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.83
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.65
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.21
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 45.42
+[2023-08-30 18:51:06,164][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 43.61
+
+[2023-08-30 18:51:07,386][    INFO] ===========> Epoch: 28, LR: 0.00068, Previous best: 47.19
+[2023-08-30 18:51:08,340][    INFO] Iters: 0, Total loss: 0.145, Loss x: 0.237, Loss s: 0.100, Loss w_fp: 0.007, Mask ratio: 0.384
+[2023-08-30 18:51:53,037][    INFO] Iters: 76, Total loss: 0.121, Loss x: 0.183, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.455
+[2023-08-30 18:52:37,666][    INFO] Iters: 152, Total loss: 0.123, Loss x: 0.186, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.477
+[2023-08-30 18:53:22,269][    INFO] Iters: 228, Total loss: 0.126, Loss x: 0.191, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.473
+[2023-08-30 18:54:07,006][    INFO] Iters: 304, Total loss: 0.127, Loss x: 0.191, Loss s: 0.113, Loss w_fp: 0.015, Mask ratio: 0.474
+[2023-08-30 18:54:51,704][    INFO] Iters: 380, Total loss: 0.125, Loss x: 0.188, Loss s: 0.109, Loss w_fp: 0.015, Mask ratio: 0.479
+[2023-08-30 18:55:36,479][    INFO] Iters: 456, Total loss: 0.127, Loss x: 0.192, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.477
+[2023-08-30 18:56:21,153][    INFO] Iters: 532, Total loss: 0.128, Loss x: 0.193, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.478
+[2023-08-30 18:57:05,813][    INFO] Iters: 608, Total loss: 0.127, Loss x: 0.191, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.478
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 49.52
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.65
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.70
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.81
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 18.79
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.61
+[2023-08-30 18:58:24,339][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.02
+[2023-08-30 18:58:24,340][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.16
+
+[2023-08-30 18:58:25,418][    INFO] ===========> Epoch: 29, LR: 0.00067, Previous best: 47.19
+[2023-08-30 18:58:26,507][    INFO] Iters: 0, Total loss: 0.139, Loss x: 0.126, Loss s: 0.299, Loss w_fp: 0.004, Mask ratio: 0.101
+[2023-08-30 18:59:11,070][    INFO] Iters: 76, Total loss: 0.123, Loss x: 0.192, Loss s: 0.093, Loss w_fp: 0.014, Mask ratio: 0.511
+[2023-08-30 18:59:55,760][    INFO] Iters: 152, Total loss: 0.124, Loss x: 0.187, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.516
+[2023-08-30 19:00:40,533][    INFO] Iters: 228, Total loss: 0.119, Loss x: 0.182, Loss s: 0.099, Loss w_fp: 0.014, Mask ratio: 0.499
+[2023-08-30 19:01:25,156][    INFO] Iters: 304, Total loss: 0.123, Loss x: 0.188, Loss s: 0.102, Loss w_fp: 0.013, Mask ratio: 0.490
+[2023-08-30 19:02:09,916][    INFO] Iters: 380, Total loss: 0.124, Loss x: 0.190, Loss s: 0.103, Loss w_fp: 0.013, Mask ratio: 0.492
+[2023-08-30 19:02:54,816][    INFO] Iters: 456, Total loss: 0.123, Loss x: 0.188, Loss s: 0.103, Loss w_fp: 0.013, Mask ratio: 0.497
+[2023-08-30 19:03:39,476][    INFO] Iters: 532, Total loss: 0.123, Loss x: 0.187, Loss s: 0.104, Loss w_fp: 0.013, Mask ratio: 0.490
+[2023-08-30 19:04:24,251][    INFO] Iters: 608, Total loss: 0.123, Loss x: 0.186, Loss s: 0.105, Loss w_fp: 0.013, Mask ratio: 0.489
+[2023-08-30 19:05:41,871][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.52
+[2023-08-30 19:05:41,871][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.50
+[2023-08-30 19:05:41,871][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.14
+[2023-08-30 19:05:41,872][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 69.04
+[2023-08-30 19:05:41,872][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.68
+[2023-08-30 19:05:41,872][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 31.46
+[2023-08-30 19:05:41,872][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.28
+[2023-08-30 19:05:41,872][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.95
+
+[2023-08-30 19:05:43,164][    INFO] ===========> Epoch: 30, LR: 0.00066, Previous best: 47.19
+[2023-08-30 19:05:44,169][    INFO] Iters: 0, Total loss: 0.152, Loss x: 0.234, Loss s: 0.140, Loss w_fp: 0.003, Mask ratio: 0.219
+[2023-08-30 19:06:28,818][    INFO] Iters: 76, Total loss: 0.125, Loss x: 0.186, Loss s: 0.119, Loss w_fp: 0.010, Mask ratio: 0.474
+[2023-08-30 19:07:13,572][    INFO] Iters: 152, Total loss: 0.120, Loss x: 0.177, Loss s: 0.113, Loss w_fp: 0.013, Mask ratio: 0.474
+[2023-08-30 19:07:58,197][    INFO] Iters: 228, Total loss: 0.124, Loss x: 0.185, Loss s: 0.113, Loss w_fp: 0.012, Mask ratio: 0.480
+[2023-08-30 19:08:42,892][    INFO] Iters: 304, Total loss: 0.125, Loss x: 0.188, Loss s: 0.113, Loss w_fp: 0.013, Mask ratio: 0.477
+[2023-08-30 19:09:27,550][    INFO] Iters: 380, Total loss: 0.127, Loss x: 0.187, Loss s: 0.121, Loss w_fp: 0.014, Mask ratio: 0.484
+[2023-08-30 19:10:12,279][    INFO] Iters: 456, Total loss: 0.126, Loss x: 0.185, Loss s: 0.120, Loss w_fp: 0.014, Mask ratio: 0.483
+[2023-08-30 19:10:56,988][    INFO] Iters: 532, Total loss: 0.125, Loss x: 0.184, Loss s: 0.118, Loss w_fp: 0.014, Mask ratio: 0.489
+[2023-08-30 19:11:41,850][    INFO] Iters: 608, Total loss: 0.125, Loss x: 0.184, Loss s: 0.119, Loss w_fp: 0.015, Mask ratio: 0.488
+[2023-08-30 19:13:00,052][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 44.59
+[2023-08-30 19:13:00,052][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.59
+[2023-08-30 19:13:00,052][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.19
+[2023-08-30 19:13:00,053][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.30
+[2023-08-30 19:13:00,053][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 18.28
+[2023-08-30 19:13:00,053][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.10
+[2023-08-30 19:13:00,053][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.60
+[2023-08-30 19:13:00,053][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.81
+
+[2023-08-30 19:13:01,402][    INFO] ===========> Epoch: 31, LR: 0.00064, Previous best: 47.19
+[2023-08-30 19:13:02,408][    INFO] Iters: 0, Total loss: 0.112, Loss x: 0.125, Loss s: 0.177, Loss w_fp: 0.020, Mask ratio: 0.290
+[2023-08-30 19:13:46,948][    INFO] Iters: 76, Total loss: 0.108, Loss x: 0.161, Loss s: 0.095, Loss w_fp: 0.013, Mask ratio: 0.539
+[2023-08-30 19:14:31,496][    INFO] Iters: 152, Total loss: 0.110, Loss x: 0.165, Loss s: 0.098, Loss w_fp: 0.013, Mask ratio: 0.518
+[2023-08-30 19:15:16,295][    INFO] Iters: 228, Total loss: 0.113, Loss x: 0.171, Loss s: 0.096, Loss w_fp: 0.013, Mask ratio: 0.506
+[2023-08-30 19:16:01,127][    INFO] Iters: 304, Total loss: 0.116, Loss x: 0.176, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.501
+[2023-08-30 19:16:45,737][    INFO] Iters: 380, Total loss: 0.118, Loss x: 0.178, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.497
+[2023-08-30 19:17:30,479][    INFO] Iters: 456, Total loss: 0.117, Loss x: 0.176, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.499
+[2023-08-30 19:18:15,168][    INFO] Iters: 532, Total loss: 0.117, Loss x: 0.175, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.492
+[2023-08-30 19:18:59,975][    INFO] Iters: 608, Total loss: 0.119, Loss x: 0.178, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.499
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 44.57
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.83
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.00
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.17
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.44
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 36.06
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.46
+[2023-08-30 19:20:17,484][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.08
+
+[2023-08-30 19:20:18,592][    INFO] ===========> Epoch: 32, LR: 0.00063, Previous best: 47.19
+[2023-08-30 19:20:19,566][    INFO] Iters: 0, Total loss: 0.083, Loss x: 0.127, Loss s: 0.062, Loss w_fp: 0.014, Mask ratio: 0.162
+[2023-08-30 19:21:04,120][    INFO] Iters: 76, Total loss: 0.128, Loss x: 0.168, Loss s: 0.159, Loss w_fp: 0.016, Mask ratio: 0.480
+[2023-08-30 19:21:48,684][    INFO] Iters: 152, Total loss: 0.128, Loss x: 0.183, Loss s: 0.134, Loss w_fp: 0.013, Mask ratio: 0.505
+[2023-08-30 19:22:33,467][    INFO] Iters: 228, Total loss: 0.127, Loss x: 0.183, Loss s: 0.131, Loss w_fp: 0.014, Mask ratio: 0.516
+[2023-08-30 19:23:18,230][    INFO] Iters: 304, Total loss: 0.125, Loss x: 0.180, Loss s: 0.125, Loss w_fp: 0.014, Mask ratio: 0.511
+[2023-08-30 19:24:03,055][    INFO] Iters: 380, Total loss: 0.123, Loss x: 0.179, Loss s: 0.122, Loss w_fp: 0.014, Mask ratio: 0.505
+[2023-08-30 19:24:47,844][    INFO] Iters: 456, Total loss: 0.121, Loss x: 0.177, Loss s: 0.118, Loss w_fp: 0.014, Mask ratio: 0.499
+[2023-08-30 19:25:32,475][    INFO] Iters: 532, Total loss: 0.120, Loss x: 0.176, Loss s: 0.115, Loss w_fp: 0.014, Mask ratio: 0.499
+[2023-08-30 19:26:17,101][    INFO] Iters: 608, Total loss: 0.120, Loss x: 0.176, Loss s: 0.113, Loss w_fp: 0.014, Mask ratio: 0.500
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 46.91
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.04
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.18
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.37
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.51
+[2023-08-30 19:27:35,547][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 36.62
+[2023-08-30 19:27:35,548][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.63
+[2023-08-30 19:27:35,548][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.18
+
+[2023-08-30 19:27:36,565][    INFO] ===========> Epoch: 33, LR: 0.00062, Previous best: 47.19
+[2023-08-30 19:27:37,517][    INFO] Iters: 0, Total loss: 0.161, Loss x: 0.182, Loss s: 0.238, Loss w_fp: 0.042, Mask ratio: 0.513
+[2023-08-30 19:28:22,043][    INFO] Iters: 76, Total loss: 0.111, Loss x: 0.174, Loss s: 0.083, Loss w_fp: 0.014, Mask ratio: 0.568
+[2023-08-30 19:29:06,774][    INFO] Iters: 152, Total loss: 0.111, Loss x: 0.167, Loss s: 0.096, Loss w_fp: 0.015, Mask ratio: 0.543
+[2023-08-30 19:29:51,463][    INFO] Iters: 228, Total loss: 0.117, Loss x: 0.177, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.548
+[2023-08-30 19:30:36,185][    INFO] Iters: 304, Total loss: 0.113, Loss x: 0.172, Loss s: 0.096, Loss w_fp: 0.014, Mask ratio: 0.527
+[2023-08-30 19:31:20,912][    INFO] Iters: 380, Total loss: 0.115, Loss x: 0.171, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.527
+[2023-08-30 19:32:05,692][    INFO] Iters: 456, Total loss: 0.114, Loss x: 0.171, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.534
+[2023-08-30 19:32:50,369][    INFO] Iters: 532, Total loss: 0.114, Loss x: 0.169, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.530
+[2023-08-30 19:33:35,096][    INFO] Iters: 608, Total loss: 0.115, Loss x: 0.171, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.528
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 49.08
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.10
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.28
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.14
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 26.37
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.94
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 55.36
+[2023-08-30 19:34:53,349][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.90
+
+[2023-08-30 19:34:55,679][    INFO] ===========> Epoch: 34, LR: 0.00061, Previous best: 47.90
+[2023-08-30 19:34:56,731][    INFO] Iters: 0, Total loss: 0.132, Loss x: 0.116, Loss s: 0.198, Loss w_fp: 0.098, Mask ratio: 0.459
+[2023-08-30 19:35:41,238][    INFO] Iters: 76, Total loss: 0.126, Loss x: 0.183, Loss s: 0.122, Loss w_fp: 0.016, Mask ratio: 0.476
+[2023-08-30 19:36:25,947][    INFO] Iters: 152, Total loss: 0.122, Loss x: 0.181, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.492
+[2023-08-30 19:37:10,615][    INFO] Iters: 228, Total loss: 0.114, Loss x: 0.172, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.510
+[2023-08-30 19:37:55,311][    INFO] Iters: 304, Total loss: 0.113, Loss x: 0.168, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.521
+[2023-08-30 19:38:40,005][    INFO] Iters: 380, Total loss: 0.114, Loss x: 0.170, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.518
+[2023-08-30 19:39:24,647][    INFO] Iters: 456, Total loss: 0.117, Loss x: 0.174, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.519
+[2023-08-30 19:40:09,374][    INFO] Iters: 532, Total loss: 0.115, Loss x: 0.172, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 19:40:54,131][    INFO] Iters: 608, Total loss: 0.115, Loss x: 0.171, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.517
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 38.08
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.89
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.75
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.39
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.32
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.73
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.29
+[2023-08-30 19:42:11,888][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.35
+
+[2023-08-30 19:42:12,903][    INFO] ===========> Epoch: 35, LR: 0.00060, Previous best: 47.90
+[2023-08-30 19:42:13,922][    INFO] Iters: 0, Total loss: 0.123, Loss x: 0.198, Loss s: 0.078, Loss w_fp: 0.017, Mask ratio: 0.410
+[2023-08-30 19:42:58,547][    INFO] Iters: 76, Total loss: 0.112, Loss x: 0.156, Loss s: 0.125, Loss w_fp: 0.013, Mask ratio: 0.515
+[2023-08-30 19:43:43,175][    INFO] Iters: 152, Total loss: 0.113, Loss x: 0.160, Loss s: 0.119, Loss w_fp: 0.014, Mask ratio: 0.503
+[2023-08-30 19:44:27,839][    INFO] Iters: 228, Total loss: 0.114, Loss x: 0.162, Loss s: 0.118, Loss w_fp: 0.015, Mask ratio: 0.511
+[2023-08-30 19:45:12,497][    INFO] Iters: 304, Total loss: 0.116, Loss x: 0.166, Loss s: 0.120, Loss w_fp: 0.014, Mask ratio: 0.514
+[2023-08-30 19:45:57,071][    INFO] Iters: 380, Total loss: 0.116, Loss x: 0.167, Loss s: 0.116, Loss w_fp: 0.014, Mask ratio: 0.518
+[2023-08-30 19:46:41,941][    INFO] Iters: 456, Total loss: 0.113, Loss x: 0.164, Loss s: 0.112, Loss w_fp: 0.013, Mask ratio: 0.522
+[2023-08-30 19:47:26,671][    INFO] Iters: 532, Total loss: 0.115, Loss x: 0.165, Loss s: 0.118, Loss w_fp: 0.013, Mask ratio: 0.520
+[2023-08-30 19:48:11,262][    INFO] Iters: 608, Total loss: 0.117, Loss x: 0.170, Loss s: 0.116, Loss w_fp: 0.014, Mask ratio: 0.514
+[2023-08-30 19:49:29,580][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.55
+[2023-08-30 19:49:29,580][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.43
+[2023-08-30 19:49:29,580][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.32
+[2023-08-30 19:49:29,581][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.50
+[2023-08-30 19:49:29,581][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 15.63
+[2023-08-30 19:49:29,581][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.96
+[2023-08-30 19:49:29,581][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.35
+[2023-08-30 19:49:29,581][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.10
+
+[2023-08-30 19:49:30,716][    INFO] ===========> Epoch: 36, LR: 0.00058, Previous best: 47.90
+[2023-08-30 19:49:31,710][    INFO] Iters: 0, Total loss: 0.025, Loss x: 0.003, Loss s: 0.073, Loss w_fp: 0.021, Mask ratio: 0.404
+[2023-08-30 19:50:16,314][    INFO] Iters: 76, Total loss: 0.122, Loss x: 0.176, Loss s: 0.125, Loss w_fp: 0.012, Mask ratio: 0.488
+[2023-08-30 19:51:00,958][    INFO] Iters: 152, Total loss: 0.123, Loss x: 0.174, Loss s: 0.133, Loss w_fp: 0.012, Mask ratio: 0.501
+[2023-08-30 19:51:45,602][    INFO] Iters: 228, Total loss: 0.119, Loss x: 0.175, Loss s: 0.114, Loss w_fp: 0.013, Mask ratio: 0.508
+[2023-08-30 19:52:30,169][    INFO] Iters: 304, Total loss: 0.119, Loss x: 0.176, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.508
+[2023-08-30 19:53:14,873][    INFO] Iters: 380, Total loss: 0.115, Loss x: 0.171, Loss s: 0.102, Loss w_fp: 0.013, Mask ratio: 0.518
+[2023-08-30 19:53:59,510][    INFO] Iters: 456, Total loss: 0.116, Loss x: 0.172, Loss s: 0.106, Loss w_fp: 0.013, Mask ratio: 0.517
+[2023-08-30 19:54:44,260][    INFO] Iters: 532, Total loss: 0.115, Loss x: 0.170, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.514
+[2023-08-30 19:55:28,915][    INFO] Iters: 608, Total loss: 0.115, Loss x: 0.170, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.517
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 41.63
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 56.87
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.28
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.64
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.29
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.59
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 54.40
+[2023-08-30 19:56:47,160][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.67
+
+[2023-08-30 19:56:48,184][    INFO] ===========> Epoch: 37, LR: 0.00057, Previous best: 47.90
+[2023-08-30 19:56:49,176][    INFO] Iters: 0, Total loss: 0.095, Loss x: 0.092, Loss s: 0.187, Loss w_fp: 0.008, Mask ratio: 0.834
+[2023-08-30 19:57:33,732][    INFO] Iters: 76, Total loss: 0.115, Loss x: 0.161, Loss s: 0.126, Loss w_fp: 0.013, Mask ratio: 0.492
+[2023-08-30 19:58:18,382][    INFO] Iters: 152, Total loss: 0.114, Loss x: 0.163, Loss s: 0.116, Loss w_fp: 0.014, Mask ratio: 0.512
+[2023-08-30 19:59:03,048][    INFO] Iters: 228, Total loss: 0.116, Loss x: 0.167, Loss s: 0.115, Loss w_fp: 0.016, Mask ratio: 0.521
+[2023-08-30 19:59:47,821][    INFO] Iters: 304, Total loss: 0.117, Loss x: 0.170, Loss s: 0.113, Loss w_fp: 0.016, Mask ratio: 0.514
+[2023-08-30 20:00:32,669][    INFO] Iters: 380, Total loss: 0.116, Loss x: 0.169, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.517
+[2023-08-30 20:01:17,307][    INFO] Iters: 456, Total loss: 0.115, Loss x: 0.169, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.520
+[2023-08-30 20:02:01,938][    INFO] Iters: 532, Total loss: 0.117, Loss x: 0.170, Loss s: 0.112, Loss w_fp: 0.015, Mask ratio: 0.521
+[2023-08-30 20:02:46,622][    INFO] Iters: 608, Total loss: 0.119, Loss x: 0.171, Loss s: 0.119, Loss w_fp: 0.015, Mask ratio: 0.521
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 36.47
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.30
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.00
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.25
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.61
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.08
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 45.32
+[2023-08-30 20:04:04,749][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 42.72
+
+[2023-08-30 20:04:05,860][    INFO] ===========> Epoch: 38, LR: 0.00056, Previous best: 47.90
+[2023-08-30 20:04:06,866][    INFO] Iters: 0, Total loss: 0.065, Loss x: 0.095, Loss s: 0.061, Loss w_fp: 0.010, Mask ratio: 0.738
+[2023-08-30 20:04:51,511][    INFO] Iters: 76, Total loss: 0.112, Loss x: 0.170, Loss s: 0.093, Loss w_fp: 0.015, Mask ratio: 0.525
+[2023-08-30 20:05:36,247][    INFO] Iters: 152, Total loss: 0.108, Loss x: 0.162, Loss s: 0.092, Loss w_fp: 0.016, Mask ratio: 0.524
+[2023-08-30 20:06:20,943][    INFO] Iters: 228, Total loss: 0.105, Loss x: 0.157, Loss s: 0.094, Loss w_fp: 0.014, Mask ratio: 0.524
+[2023-08-30 20:07:05,467][    INFO] Iters: 304, Total loss: 0.107, Loss x: 0.159, Loss s: 0.096, Loss w_fp: 0.013, Mask ratio: 0.519
+[2023-08-30 20:07:50,109][    INFO] Iters: 380, Total loss: 0.108, Loss x: 0.160, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:08:34,828][    INFO] Iters: 456, Total loss: 0.110, Loss x: 0.163, Loss s: 0.099, Loss w_fp: 0.014, Mask ratio: 0.519
+[2023-08-30 20:09:19,614][    INFO] Iters: 532, Total loss: 0.109, Loss x: 0.162, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:10:04,285][    INFO] Iters: 608, Total loss: 0.108, Loss x: 0.160, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 38.70
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.77
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.42
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 62.75
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 26.15
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.71
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 46.76
+[2023-08-30 20:11:21,513][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.75
+
+[2023-08-30 20:11:22,607][    INFO] ===========> Epoch: 39, LR: 0.00055, Previous best: 47.90
+[2023-08-30 20:11:23,574][    INFO] Iters: 0, Total loss: 0.101, Loss x: 0.119, Loss s: 0.151, Loss w_fp: 0.015, Mask ratio: 0.558
+[2023-08-30 20:12:08,046][    INFO] Iters: 76, Total loss: 0.101, Loss x: 0.148, Loss s: 0.095, Loss w_fp: 0.013, Mask ratio: 0.539
+[2023-08-30 20:12:52,613][    INFO] Iters: 152, Total loss: 0.104, Loss x: 0.156, Loss s: 0.092, Loss w_fp: 0.012, Mask ratio: 0.530
+[2023-08-30 20:13:37,325][    INFO] Iters: 228, Total loss: 0.104, Loss x: 0.153, Loss s: 0.098, Loss w_fp: 0.013, Mask ratio: 0.521
+[2023-08-30 20:14:22,126][    INFO] Iters: 304, Total loss: 0.111, Loss x: 0.163, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:15:06,726][    INFO] Iters: 380, Total loss: 0.109, Loss x: 0.161, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:15:51,354][    INFO] Iters: 456, Total loss: 0.110, Loss x: 0.160, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.518
+[2023-08-30 20:16:36,078][    INFO] Iters: 532, Total loss: 0.111, Loss x: 0.158, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.518
+[2023-08-30 20:17:20,728][    INFO] Iters: 608, Total loss: 0.111, Loss x: 0.158, Loss s: 0.115, Loss w_fp: 0.014, Mask ratio: 0.517
+[2023-08-30 20:18:37,994][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.39
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.49
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.18
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.72
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.60
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.87
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.01
+[2023-08-30 20:18:37,995][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.89
+
+[2023-08-30 20:18:39,188][    INFO] ===========> Epoch: 40, LR: 0.00054, Previous best: 47.90
+[2023-08-30 20:18:40,194][    INFO] Iters: 0, Total loss: 0.127, Loss x: 0.085, Loss s: 0.314, Loss w_fp: 0.026, Mask ratio: 0.604
+[2023-08-30 20:19:24,906][    INFO] Iters: 76, Total loss: 0.110, Loss x: 0.172, Loss s: 0.084, Loss w_fp: 0.013, Mask ratio: 0.508
+[2023-08-30 20:20:09,569][    INFO] Iters: 152, Total loss: 0.110, Loss x: 0.165, Loss s: 0.095, Loss w_fp: 0.013, Mask ratio: 0.496
+[2023-08-30 20:20:54,221][    INFO] Iters: 228, Total loss: 0.112, Loss x: 0.170, Loss s: 0.093, Loss w_fp: 0.013, Mask ratio: 0.503
+[2023-08-30 20:21:38,797][    INFO] Iters: 304, Total loss: 0.112, Loss x: 0.168, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.509
+[2023-08-30 20:22:23,494][    INFO] Iters: 380, Total loss: 0.110, Loss x: 0.163, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.514
+[2023-08-30 20:23:08,270][    INFO] Iters: 456, Total loss: 0.111, Loss x: 0.163, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.514
+[2023-08-30 20:23:52,988][    INFO] Iters: 532, Total loss: 0.112, Loss x: 0.165, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.518
+[2023-08-30 20:24:37,709][    INFO] Iters: 608, Total loss: 0.111, Loss x: 0.163, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.520
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.18
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.49
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.09
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.69
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.01
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.22
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.97
+[2023-08-30 20:25:55,147][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.81
+
+[2023-08-30 20:25:56,175][    INFO] ===========> Epoch: 41, LR: 0.00052, Previous best: 47.90
+[2023-08-30 20:25:57,159][    INFO] Iters: 0, Total loss: 0.188, Loss x: 0.309, Loss s: 0.126, Loss w_fp: 0.009, Mask ratio: 0.596
+[2023-08-30 20:26:41,680][    INFO] Iters: 76, Total loss: 0.104, Loss x: 0.146, Loss s: 0.107, Loss w_fp: 0.018, Mask ratio: 0.517
+[2023-08-30 20:27:26,402][    INFO] Iters: 152, Total loss: 0.109, Loss x: 0.156, Loss s: 0.105, Loss w_fp: 0.017, Mask ratio: 0.524
+[2023-08-30 20:28:11,196][    INFO] Iters: 228, Total loss: 0.108, Loss x: 0.157, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.537
+[2023-08-30 20:28:56,020][    INFO] Iters: 304, Total loss: 0.110, Loss x: 0.159, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.531
+[2023-08-30 20:29:40,576][    INFO] Iters: 380, Total loss: 0.110, Loss x: 0.161, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.528
+[2023-08-30 20:30:25,153][    INFO] Iters: 456, Total loss: 0.109, Loss x: 0.160, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.527
+[2023-08-30 20:31:09,836][    INFO] Iters: 532, Total loss: 0.107, Loss x: 0.156, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.527
+[2023-08-30 20:31:54,571][    INFO] Iters: 608, Total loss: 0.106, Loss x: 0.154, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.525
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 50.63
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.33
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.95
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.75
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.60
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.45
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.79
+[2023-08-30 20:33:11,641][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.07
+
+[2023-08-30 20:33:12,651][    INFO] ===========> Epoch: 42, LR: 0.00051, Previous best: 47.90
+[2023-08-30 20:33:13,651][    INFO] Iters: 0, Total loss: 0.130, Loss x: 0.186, Loss s: 0.115, Loss w_fp: 0.033, Mask ratio: 0.219
+[2023-08-30 20:33:58,339][    INFO] Iters: 76, Total loss: 0.103, Loss x: 0.153, Loss s: 0.092, Loss w_fp: 0.012, Mask ratio: 0.567
+[2023-08-30 20:34:43,059][    INFO] Iters: 152, Total loss: 0.110, Loss x: 0.166, Loss s: 0.095, Loss w_fp: 0.012, Mask ratio: 0.542
+[2023-08-30 20:35:27,646][    INFO] Iters: 228, Total loss: 0.109, Loss x: 0.160, Loss s: 0.104, Loss w_fp: 0.013, Mask ratio: 0.540
+[2023-08-30 20:36:12,339][    INFO] Iters: 304, Total loss: 0.109, Loss x: 0.158, Loss s: 0.106, Loss w_fp: 0.013, Mask ratio: 0.537
+[2023-08-30 20:36:57,027][    INFO] Iters: 380, Total loss: 0.108, Loss x: 0.158, Loss s: 0.105, Loss w_fp: 0.012, Mask ratio: 0.533
+[2023-08-30 20:37:41,872][    INFO] Iters: 456, Total loss: 0.106, Loss x: 0.155, Loss s: 0.102, Loss w_fp: 0.012, Mask ratio: 0.539
+[2023-08-30 20:38:26,573][    INFO] Iters: 532, Total loss: 0.106, Loss x: 0.155, Loss s: 0.103, Loss w_fp: 0.012, Mask ratio: 0.535
+[2023-08-30 20:39:11,373][    INFO] Iters: 608, Total loss: 0.106, Loss x: 0.154, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.536
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 46.08
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.44
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.58
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.92
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.37
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.73
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.70
+[2023-08-30 20:40:29,385][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.26
+
+[2023-08-30 20:40:30,487][    INFO] ===========> Epoch: 43, LR: 0.00050, Previous best: 47.90
+[2023-08-30 20:40:31,456][    INFO] Iters: 0, Total loss: 0.092, Loss x: 0.166, Loss s: 0.032, Loss w_fp: 0.005, Mask ratio: 0.875
+[2023-08-30 20:41:16,042][    INFO] Iters: 76, Total loss: 0.097, Loss x: 0.143, Loss s: 0.087, Loss w_fp: 0.014, Mask ratio: 0.533
+[2023-08-30 20:42:00,688][    INFO] Iters: 152, Total loss: 0.107, Loss x: 0.152, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.532
+[2023-08-30 20:42:45,360][    INFO] Iters: 228, Total loss: 0.102, Loss x: 0.147, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.544
+[2023-08-30 20:43:29,987][    INFO] Iters: 304, Total loss: 0.105, Loss x: 0.152, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.551
+[2023-08-30 20:44:14,795][    INFO] Iters: 380, Total loss: 0.107, Loss x: 0.152, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.551
+[2023-08-30 20:44:59,622][    INFO] Iters: 456, Total loss: 0.107, Loss x: 0.152, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.550
+[2023-08-30 20:45:44,392][    INFO] Iters: 532, Total loss: 0.108, Loss x: 0.154, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.549
+[2023-08-30 20:46:29,106][    INFO] Iters: 608, Total loss: 0.108, Loss x: 0.154, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.546
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.49
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.21
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.38
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 64.42
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.34
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.31
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.31
+[2023-08-30 20:47:47,127][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.64
+
+[2023-08-30 20:47:47,981][    INFO] ===========> Epoch: 44, LR: 0.00049, Previous best: 47.90
+[2023-08-30 20:47:48,933][    INFO] Iters: 0, Total loss: 0.056, Loss x: 0.065, Loss s: 0.090, Loss w_fp: 0.003, Mask ratio: 0.206
+[2023-08-30 20:48:33,542][    INFO] Iters: 76, Total loss: 0.107, Loss x: 0.148, Loss s: 0.117, Loss w_fp: 0.013, Mask ratio: 0.553
+[2023-08-30 20:49:18,220][    INFO] Iters: 152, Total loss: 0.103, Loss x: 0.146, Loss s: 0.106, Loss w_fp: 0.013, Mask ratio: 0.552
+[2023-08-30 20:50:03,108][    INFO] Iters: 228, Total loss: 0.102, Loss x: 0.148, Loss s: 0.100, Loss w_fp: 0.012, Mask ratio: 0.552
+[2023-08-30 20:50:47,861][    INFO] Iters: 304, Total loss: 0.104, Loss x: 0.147, Loss s: 0.110, Loss w_fp: 0.012, Mask ratio: 0.546
+[2023-08-30 20:51:32,619][    INFO] Iters: 380, Total loss: 0.105, Loss x: 0.148, Loss s: 0.112, Loss w_fp: 0.012, Mask ratio: 0.536
+[2023-08-30 20:52:17,364][    INFO] Iters: 456, Total loss: 0.105, Loss x: 0.149, Loss s: 0.109, Loss w_fp: 0.013, Mask ratio: 0.539
+[2023-08-30 20:53:02,008][    INFO] Iters: 532, Total loss: 0.104, Loss x: 0.148, Loss s: 0.108, Loss w_fp: 0.013, Mask ratio: 0.544
+[2023-08-30 20:53:46,671][    INFO] Iters: 608, Total loss: 0.105, Loss x: 0.148, Loss s: 0.111, Loss w_fp: 0.013, Mask ratio: 0.550
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.47
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.79
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.01
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.77
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.16
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.50
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.38
+[2023-08-30 20:55:05,142][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.44
+
+[2023-08-30 20:55:06,009][    INFO] ===========> Epoch: 45, LR: 0.00048, Previous best: 47.90
+[2023-08-30 20:55:07,014][    INFO] Iters: 0, Total loss: 0.012, Loss x: 0.002, Loss s: 0.041, Loss w_fp: 0.005, Mask ratio: 0.645
+[2023-08-30 20:55:51,518][    INFO] Iters: 76, Total loss: 0.104, Loss x: 0.150, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.543
+[2023-08-30 20:56:36,236][    INFO] Iters: 152, Total loss: 0.109, Loss x: 0.150, Loss s: 0.119, Loss w_fp: 0.015, Mask ratio: 0.540
+[2023-08-30 20:57:21,025][    INFO] Iters: 228, Total loss: 0.107, Loss x: 0.149, Loss s: 0.116, Loss w_fp: 0.014, Mask ratio: 0.545
+[2023-08-30 20:58:05,727][    INFO] Iters: 304, Total loss: 0.110, Loss x: 0.155, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.545
+[2023-08-30 20:58:50,437][    INFO] Iters: 380, Total loss: 0.111, Loss x: 0.157, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.541
+[2023-08-30 20:59:34,990][    INFO] Iters: 456, Total loss: 0.111, Loss x: 0.157, Loss s: 0.114, Loss w_fp: 0.013, Mask ratio: 0.541
+[2023-08-30 21:00:19,761][    INFO] Iters: 532, Total loss: 0.110, Loss x: 0.156, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.541
+[2023-08-30 21:01:04,439][    INFO] Iters: 608, Total loss: 0.110, Loss x: 0.157, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.540
+[2023-08-30 21:02:22,286][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.94
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.58
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.64
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.33
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.10
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.42
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.21
+[2023-08-30 21:02:22,287][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.18
+
+[2023-08-30 21:02:23,144][    INFO] ===========> Epoch: 46, LR: 0.00046, Previous best: 47.90
+[2023-08-30 21:02:24,127][    INFO] Iters: 0, Total loss: 0.117, Loss x: 0.212, Loss s: 0.036, Loss w_fp: 0.008, Mask ratio: 0.443
+[2023-08-30 21:03:08,754][    INFO] Iters: 76, Total loss: 0.107, Loss x: 0.164, Loss s: 0.085, Loss w_fp: 0.015, Mask ratio: 0.542
+[2023-08-30 21:03:53,464][    INFO] Iters: 152, Total loss: 0.111, Loss x: 0.169, Loss s: 0.092, Loss w_fp: 0.015, Mask ratio: 0.558
+[2023-08-30 21:04:38,188][    INFO] Iters: 228, Total loss: 0.109, Loss x: 0.164, Loss s: 0.095, Loss w_fp: 0.014, Mask ratio: 0.554
+[2023-08-30 21:05:22,760][    INFO] Iters: 304, Total loss: 0.111, Loss x: 0.164, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.553
+[2023-08-30 21:06:07,301][    INFO] Iters: 380, Total loss: 0.108, Loss x: 0.159, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.554
+[2023-08-30 21:06:51,916][    INFO] Iters: 456, Total loss: 0.109, Loss x: 0.159, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.553
+[2023-08-30 21:07:36,701][    INFO] Iters: 532, Total loss: 0.108, Loss x: 0.157, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.549
+[2023-08-30 21:08:21,528][    INFO] Iters: 608, Total loss: 0.108, Loss x: 0.156, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.548
+[2023-08-30 21:09:38,467][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.94
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.11
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.79
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 63.99
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.13
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.90
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.31
+[2023-08-30 21:09:38,468][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.31
+
+[2023-08-30 21:09:39,331][    INFO] ===========> Epoch: 47, LR: 0.00045, Previous best: 47.90
+[2023-08-30 21:09:40,340][    INFO] Iters: 0, Total loss: 0.174, Loss x: 0.227, Loss s: 0.237, Loss w_fp: 0.006, Mask ratio: 0.708
+[2023-08-30 21:10:24,920][    INFO] Iters: 76, Total loss: 0.099, Loss x: 0.139, Loss s: 0.101, Loss w_fp: 0.016, Mask ratio: 0.559
+[2023-08-30 21:11:09,582][    INFO] Iters: 152, Total loss: 0.099, Loss x: 0.139, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.556
+[2023-08-30 21:11:54,306][    INFO] Iters: 228, Total loss: 0.102, Loss x: 0.141, Loss s: 0.110, Loss w_fp: 0.017, Mask ratio: 0.552
+[2023-08-30 21:12:38,958][    INFO] Iters: 304, Total loss: 0.102, Loss x: 0.143, Loss s: 0.105, Loss w_fp: 0.016, Mask ratio: 0.546
+[2023-08-30 21:13:23,626][    INFO] Iters: 380, Total loss: 0.101, Loss x: 0.144, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.552
+[2023-08-30 21:14:08,320][    INFO] Iters: 456, Total loss: 0.103, Loss x: 0.145, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.552
+[2023-08-30 21:14:53,049][    INFO] Iters: 532, Total loss: 0.103, Loss x: 0.146, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.555
+[2023-08-30 21:15:37,835][    INFO] Iters: 608, Total loss: 0.103, Loss x: 0.145, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.559
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.45
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.78
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.65
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.27
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 15.48
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.32
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.86
+[2023-08-30 21:16:56,261][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.11
+
+[2023-08-30 21:16:57,129][    INFO] ===========> Epoch: 48, LR: 0.00044, Previous best: 47.90
+[2023-08-30 21:16:58,145][    INFO] Iters: 0, Total loss: 0.122, Loss x: 0.190, Loss s: 0.099, Loss w_fp: 0.010, Mask ratio: 0.371
+[2023-08-30 21:17:42,734][    INFO] Iters: 76, Total loss: 0.104, Loss x: 0.146, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.513
+[2023-08-30 21:18:27,334][    INFO] Iters: 152, Total loss: 0.102, Loss x: 0.142, Loss s: 0.111, Loss w_fp: 0.013, Mask ratio: 0.538
+[2023-08-30 21:19:12,086][    INFO] Iters: 228, Total loss: 0.099, Loss x: 0.138, Loss s: 0.109, Loss w_fp: 0.013, Mask ratio: 0.556
+[2023-08-30 21:19:56,701][    INFO] Iters: 304, Total loss: 0.099, Loss x: 0.139, Loss s: 0.106, Loss w_fp: 0.013, Mask ratio: 0.552
+[2023-08-30 21:20:41,439][    INFO] Iters: 380, Total loss: 0.101, Loss x: 0.139, Loss s: 0.114, Loss w_fp: 0.013, Mask ratio: 0.551
+[2023-08-30 21:21:26,117][    INFO] Iters: 456, Total loss: 0.102, Loss x: 0.142, Loss s: 0.111, Loss w_fp: 0.014, Mask ratio: 0.549
+[2023-08-30 21:22:10,829][    INFO] Iters: 532, Total loss: 0.102, Loss x: 0.142, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.553
+[2023-08-30 21:22:55,474][    INFO] Iters: 608, Total loss: 0.103, Loss x: 0.144, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.550
+[2023-08-30 21:24:13,354][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.20
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.72
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.73
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.63
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.87
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.84
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.68
+[2023-08-30 21:24:13,355][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.67
+
+[2023-08-30 21:24:14,235][    INFO] ===========> Epoch: 49, LR: 0.00043, Previous best: 47.90
+[2023-08-30 21:24:15,229][    INFO] Iters: 0, Total loss: 0.239, Loss x: 0.357, Loss s: 0.209, Loss w_fp: 0.034, Mask ratio: 0.581
+[2023-08-30 21:24:59,806][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.131, Loss s: 0.111, Loss w_fp: 0.012, Mask ratio: 0.530
+[2023-08-30 21:25:44,458][    INFO] Iters: 152, Total loss: 0.097, Loss x: 0.131, Loss s: 0.114, Loss w_fp: 0.012, Mask ratio: 0.533
+[2023-08-30 21:26:29,060][    INFO] Iters: 228, Total loss: 0.099, Loss x: 0.139, Loss s: 0.107, Loss w_fp: 0.011, Mask ratio: 0.538
+[2023-08-30 21:27:14,646][    INFO] Iters: 304, Total loss: 0.100, Loss x: 0.141, Loss s: 0.105, Loss w_fp: 0.012, Mask ratio: 0.539
+[2023-08-30 21:27:59,553][    INFO] Iters: 380, Total loss: 0.099, Loss x: 0.139, Loss s: 0.104, Loss w_fp: 0.012, Mask ratio: 0.543
+[2023-08-30 21:29:02,815][    INFO] Iters: 456, Total loss: 0.098, Loss x: 0.140, Loss s: 0.100, Loss w_fp: 0.012, Mask ratio: 0.545
+[2023-08-30 21:29:47,365][    INFO] Iters: 532, Total loss: 0.099, Loss x: 0.142, Loss s: 0.103, Loss w_fp: 0.012, Mask ratio: 0.546
+[2023-08-30 21:30:31,883][    INFO] Iters: 608, Total loss: 0.100, Loss x: 0.141, Loss s: 0.106, Loss w_fp: 0.012, Mask ratio: 0.542
+[2023-08-30 21:31:49,839][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.52
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.12
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.76
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.44
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.73
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.48
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.22
+[2023-08-30 21:31:49,840][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.75
+
+[2023-08-30 21:31:50,687][    INFO] ===========> Epoch: 50, LR: 0.00041, Previous best: 47.90
+[2023-08-30 21:31:51,647][    INFO] Iters: 0, Total loss: 0.066, Loss x: 0.107, Loss s: 0.041, Loss w_fp: 0.007, Mask ratio: 0.560
+[2023-08-30 21:32:36,539][    INFO] Iters: 76, Total loss: 0.101, Loss x: 0.146, Loss s: 0.097, Loss w_fp: 0.013, Mask ratio: 0.551
+[2023-08-30 21:33:21,780][    INFO] Iters: 152, Total loss: 0.104, Loss x: 0.151, Loss s: 0.100, Loss w_fp: 0.012, Mask ratio: 0.555
+[2023-08-30 21:34:07,155][    INFO] Iters: 228, Total loss: 0.107, Loss x: 0.156, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.553
+[2023-08-30 21:34:52,509][    INFO] Iters: 304, Total loss: 0.106, Loss x: 0.155, Loss s: 0.100, Loss w_fp: 0.013, Mask ratio: 0.554
+[2023-08-30 21:35:37,906][    INFO] Iters: 380, Total loss: 0.102, Loss x: 0.149, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.560
+[2023-08-30 21:36:23,570][    INFO] Iters: 456, Total loss: 0.101, Loss x: 0.146, Loss s: 0.095, Loss w_fp: 0.015, Mask ratio: 0.564
+[2023-08-30 21:37:09,235][    INFO] Iters: 532, Total loss: 0.101, Loss x: 0.145, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.568
+[2023-08-30 21:37:54,966][    INFO] Iters: 608, Total loss: 0.101, Loss x: 0.145, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.570
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.68
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.96
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.22
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.16
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.86
+[2023-08-30 21:39:13,994][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.95
+[2023-08-30 21:39:13,995][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.24
+[2023-08-30 21:39:13,995][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.72
+
+[2023-08-30 21:39:14,885][    INFO] ===========> Epoch: 51, LR: 0.00040, Previous best: 47.90
+[2023-08-30 21:39:15,930][    INFO] Iters: 0, Total loss: 0.068, Loss x: 0.061, Loss s: 0.143, Loss w_fp: 0.010, Mask ratio: 0.628
+[2023-08-30 21:40:01,787][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.131, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.562
+[2023-08-30 21:40:47,734][    INFO] Iters: 152, Total loss: 0.099, Loss x: 0.136, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.560
+[2023-08-30 21:41:33,864][    INFO] Iters: 228, Total loss: 0.098, Loss x: 0.138, Loss s: 0.101, Loss w_fp: 0.016, Mask ratio: 0.560
+[2023-08-30 21:42:20,051][    INFO] Iters: 304, Total loss: 0.102, Loss x: 0.140, Loss s: 0.112, Loss w_fp: 0.017, Mask ratio: 0.553
+[2023-08-30 21:43:06,272][    INFO] Iters: 380, Total loss: 0.103, Loss x: 0.142, Loss s: 0.111, Loss w_fp: 0.017, Mask ratio: 0.552
+[2023-08-30 21:43:52,394][    INFO] Iters: 456, Total loss: 0.104, Loss x: 0.146, Loss s: 0.107, Loss w_fp: 0.016, Mask ratio: 0.550
+[2023-08-30 21:44:38,547][    INFO] Iters: 532, Total loss: 0.104, Loss x: 0.146, Loss s: 0.106, Loss w_fp: 0.016, Mask ratio: 0.551
+[2023-08-30 21:45:24,777][    INFO] Iters: 608, Total loss: 0.103, Loss x: 0.147, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.550
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 42.83
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.42
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.82
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.13
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.47
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.07
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.43
+[2023-08-30 21:46:43,824][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.31
+
+[2023-08-30 21:46:44,709][    INFO] ===========> Epoch: 52, LR: 0.00039, Previous best: 47.90
+[2023-08-30 21:46:45,744][    INFO] Iters: 0, Total loss: 0.074, Loss x: 0.139, Loss s: 0.011, Loss w_fp: 0.005, Mask ratio: 0.910
+[2023-08-30 21:47:31,961][    INFO] Iters: 76, Total loss: 0.104, Loss x: 0.142, Loss s: 0.113, Loss w_fp: 0.018, Mask ratio: 0.578
+[2023-08-30 21:48:18,139][    INFO] Iters: 152, Total loss: 0.100, Loss x: 0.140, Loss s: 0.105, Loss w_fp: 0.016, Mask ratio: 0.552
+[2023-08-30 21:49:04,466][    INFO] Iters: 228, Total loss: 0.104, Loss x: 0.146, Loss s: 0.108, Loss w_fp: 0.016, Mask ratio: 0.553
+[2023-08-30 21:49:50,934][    INFO] Iters: 304, Total loss: 0.104, Loss x: 0.144, Loss s: 0.113, Loss w_fp: 0.015, Mask ratio: 0.555
+[2023-08-30 21:50:37,447][    INFO] Iters: 380, Total loss: 0.103, Loss x: 0.142, Loss s: 0.113, Loss w_fp: 0.015, Mask ratio: 0.562
+[2023-08-30 21:51:23,855][    INFO] Iters: 456, Total loss: 0.101, Loss x: 0.140, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.557
+[2023-08-30 21:52:10,340][    INFO] Iters: 532, Total loss: 0.101, Loss x: 0.139, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.563
+[2023-08-30 21:52:56,801][    INFO] Iters: 608, Total loss: 0.100, Loss x: 0.140, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.565
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.85
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.69
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.49
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.55
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.55
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.57
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.17
+[2023-08-30 21:54:15,938][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.27
+
+[2023-08-30 21:54:16,830][    INFO] ===========> Epoch: 53, LR: 0.00038, Previous best: 47.90
+[2023-08-30 21:54:17,910][    INFO] Iters: 0, Total loss: 0.063, Loss x: 0.099, Loss s: 0.012, Loss w_fp: 0.040, Mask ratio: 0.895
+[2023-08-30 21:55:04,254][    INFO] Iters: 76, Total loss: 0.092, Loss x: 0.126, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.550
+[2023-08-30 21:55:50,794][    INFO] Iters: 152, Total loss: 0.096, Loss x: 0.133, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.560
+[2023-08-30 21:56:37,362][    INFO] Iters: 228, Total loss: 0.097, Loss x: 0.137, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.567
+[2023-08-30 21:57:23,963][    INFO] Iters: 304, Total loss: 0.097, Loss x: 0.135, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.573
+[2023-08-30 21:58:10,528][    INFO] Iters: 380, Total loss: 0.100, Loss x: 0.138, Loss s: 0.108, Loss w_fp: 0.016, Mask ratio: 0.567
+[2023-08-30 21:58:57,120][    INFO] Iters: 456, Total loss: 0.102, Loss x: 0.137, Loss s: 0.116, Loss w_fp: 0.016, Mask ratio: 0.563
+[2023-08-30 21:59:43,723][    INFO] Iters: 532, Total loss: 0.101, Loss x: 0.138, Loss s: 0.114, Loss w_fp: 0.016, Mask ratio: 0.559
+[2023-08-30 22:00:30,432][    INFO] Iters: 608, Total loss: 0.101, Loss x: 0.137, Loss s: 0.112, Loss w_fp: 0.015, Mask ratio: 0.561
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.42
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.63
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.60
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.11
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.78
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.94
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 54.33
+[2023-08-30 22:01:49,719][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.54
+
+[2023-08-30 22:01:50,597][    INFO] ===========> Epoch: 54, LR: 0.00036, Previous best: 47.90
+[2023-08-30 22:01:51,631][    INFO] Iters: 0, Total loss: 0.148, Loss x: 0.252, Loss s: 0.069, Loss w_fp: 0.021, Mask ratio: 0.765
+[2023-08-30 22:02:38,169][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.141, Loss s: 0.085, Loss w_fp: 0.016, Mask ratio: 0.547
+[2023-08-30 22:03:24,774][    INFO] Iters: 152, Total loss: 0.102, Loss x: 0.144, Loss s: 0.104, Loss w_fp: 0.016, Mask ratio: 0.551
+[2023-08-30 22:04:11,499][    INFO] Iters: 228, Total loss: 0.102, Loss x: 0.145, Loss s: 0.100, Loss w_fp: 0.017, Mask ratio: 0.555
+[2023-08-30 22:04:58,230][    INFO] Iters: 304, Total loss: 0.102, Loss x: 0.144, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.559
+[2023-08-30 22:05:44,988][    INFO] Iters: 380, Total loss: 0.100, Loss x: 0.141, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.558
+[2023-08-30 22:06:31,698][    INFO] Iters: 456, Total loss: 0.099, Loss x: 0.140, Loss s: 0.101, Loss w_fp: 0.017, Mask ratio: 0.558
+[2023-08-30 22:07:18,341][    INFO] Iters: 532, Total loss: 0.099, Loss x: 0.139, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.564
+[2023-08-30 22:08:05,046][    INFO] Iters: 608, Total loss: 0.099, Loss x: 0.138, Loss s: 0.101, Loss w_fp: 0.016, Mask ratio: 0.569
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 49.70
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.24
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.41
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.44
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.70
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.22
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.46
+[2023-08-30 22:09:24,367][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.03
+
+[2023-08-30 22:09:25,241][    INFO] ===========> Epoch: 55, LR: 0.00035, Previous best: 47.90
+[2023-08-30 22:09:26,266][    INFO] Iters: 0, Total loss: 0.116, Loss x: 0.218, Loss s: 0.028, Loss w_fp: 0.002, Mask ratio: 0.898
+[2023-08-30 22:10:12,984][    INFO] Iters: 76, Total loss: 0.106, Loss x: 0.154, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.556
+[2023-08-30 22:10:59,679][    INFO] Iters: 152, Total loss: 0.104, Loss x: 0.151, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.561
+[2023-08-30 22:11:46,623][    INFO] Iters: 228, Total loss: 0.101, Loss x: 0.146, Loss s: 0.099, Loss w_fp: 0.013, Mask ratio: 0.571
+[2023-08-30 22:12:33,528][    INFO] Iters: 304, Total loss: 0.098, Loss x: 0.142, Loss s: 0.096, Loss w_fp: 0.013, Mask ratio: 0.570
+[2023-08-30 22:13:20,439][    INFO] Iters: 380, Total loss: 0.098, Loss x: 0.141, Loss s: 0.095, Loss w_fp: 0.014, Mask ratio: 0.572
+[2023-08-30 22:14:07,275][    INFO] Iters: 456, Total loss: 0.099, Loss x: 0.142, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.572
+[2023-08-30 22:14:54,294][    INFO] Iters: 532, Total loss: 0.098, Loss x: 0.139, Loss s: 0.099, Loss w_fp: 0.014, Mask ratio: 0.571
+[2023-08-30 22:15:41,317][    INFO] Iters: 608, Total loss: 0.097, Loss x: 0.138, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.572
+[2023-08-30 22:17:00,887][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 50.10
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.86
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 47.22
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 65.82
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.31
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.85
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.97
+[2023-08-30 22:17:00,888][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.59
+
+[2023-08-30 22:17:02,017][    INFO] ===========> Epoch: 56, LR: 0.00034, Previous best: 47.90
+[2023-08-30 22:17:03,075][    INFO] Iters: 0, Total loss: 0.066, Loss x: 0.095, Loss s: 0.047, Loss w_fp: 0.027, Mask ratio: 0.620
+[2023-08-30 22:17:49,916][    INFO] Iters: 76, Total loss: 0.099, Loss x: 0.123, Loss s: 0.131, Loss w_fp: 0.017, Mask ratio: 0.564
+[2023-08-30 22:18:36,993][    INFO] Iters: 152, Total loss: 0.099, Loss x: 0.129, Loss s: 0.123, Loss w_fp: 0.015, Mask ratio: 0.562
+[2023-08-30 22:19:24,292][    INFO] Iters: 228, Total loss: 0.099, Loss x: 0.130, Loss s: 0.119, Loss w_fp: 0.015, Mask ratio: 0.552
+[2023-08-30 22:20:11,640][    INFO] Iters: 304, Total loss: 0.100, Loss x: 0.137, Loss s: 0.112, Loss w_fp: 0.015, Mask ratio: 0.557
+[2023-08-30 22:20:59,043][    INFO] Iters: 380, Total loss: 0.101, Loss x: 0.138, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.553
+[2023-08-30 22:21:46,444][    INFO] Iters: 456, Total loss: 0.100, Loss x: 0.137, Loss s: 0.113, Loss w_fp: 0.015, Mask ratio: 0.554
+[2023-08-30 22:22:33,957][    INFO] Iters: 532, Total loss: 0.100, Loss x: 0.138, Loss s: 0.112, Loss w_fp: 0.014, Mask ratio: 0.556
+[2023-08-30 22:23:21,577][    INFO] Iters: 608, Total loss: 0.101, Loss x: 0.138, Loss s: 0.113, Loss w_fp: 0.014, Mask ratio: 0.555
+[2023-08-30 22:24:41,308][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 36.95
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 55.65
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.28
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.52
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 17.37
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.34
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.42
+[2023-08-30 22:24:41,309][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.07
+
+[2023-08-30 22:24:42,400][    INFO] ===========> Epoch: 57, LR: 0.00033, Previous best: 47.90
+[2023-08-30 22:24:43,446][    INFO] Iters: 0, Total loss: 0.110, Loss x: 0.172, Loss s: 0.072, Loss w_fp: 0.023, Mask ratio: 0.595
+[2023-08-30 22:25:30,724][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.135, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.552
+[2023-08-30 22:26:18,118][    INFO] Iters: 152, Total loss: 0.099, Loss x: 0.137, Loss s: 0.109, Loss w_fp: 0.013, Mask ratio: 0.556
+[2023-08-30 22:27:05,775][    INFO] Iters: 228, Total loss: 0.096, Loss x: 0.133, Loss s: 0.106, Loss w_fp: 0.013, Mask ratio: 0.564
+[2023-08-30 22:27:53,524][    INFO] Iters: 304, Total loss: 0.097, Loss x: 0.133, Loss s: 0.107, Loss w_fp: 0.013, Mask ratio: 0.559
+[2023-08-30 22:28:41,492][    INFO] Iters: 380, Total loss: 0.097, Loss x: 0.134, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.556
+[2023-08-30 22:29:29,375][    INFO] Iters: 456, Total loss: 0.097, Loss x: 0.133, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.562
+[2023-08-30 22:30:17,270][    INFO] Iters: 532, Total loss: 0.096, Loss x: 0.132, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.561
+[2023-08-30 22:31:05,262][    INFO] Iters: 608, Total loss: 0.097, Loss x: 0.134, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.562
+[2023-08-30 22:32:25,399][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 42.71
+[2023-08-30 22:32:25,399][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.96
+[2023-08-30 22:32:25,399][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.39
+[2023-08-30 22:32:25,400][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 62.03
+[2023-08-30 22:32:25,400][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.79
+[2023-08-30 22:32:25,400][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.37
+[2023-08-30 22:32:25,400][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.49
+[2023-08-30 22:32:25,400][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.39
+
+[2023-08-30 22:32:26,466][    INFO] ===========> Epoch: 58, LR: 0.00031, Previous best: 47.90
+[2023-08-30 22:32:27,477][    INFO] Iters: 0, Total loss: 0.111, Loss x: 0.197, Loss s: 0.044, Loss w_fp: 0.004, Mask ratio: 0.775
+[2023-08-30 22:33:15,392][    INFO] Iters: 76, Total loss: 0.095, Loss x: 0.132, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.587
+[2023-08-30 22:34:03,371][    INFO] Iters: 152, Total loss: 0.098, Loss x: 0.132, Loss s: 0.113, Loss w_fp: 0.015, Mask ratio: 0.570
+[2023-08-30 22:34:51,501][    INFO] Iters: 228, Total loss: 0.096, Loss x: 0.129, Loss s: 0.114, Loss w_fp: 0.014, Mask ratio: 0.576
+[2023-08-30 22:35:39,721][    INFO] Iters: 304, Total loss: 0.097, Loss x: 0.132, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.579
+[2023-08-30 22:36:27,918][    INFO] Iters: 380, Total loss: 0.098, Loss x: 0.134, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.578
+[2023-08-30 22:37:16,168][    INFO] Iters: 456, Total loss: 0.099, Loss x: 0.134, Loss s: 0.113, Loss w_fp: 0.016, Mask ratio: 0.569
+[2023-08-30 22:38:04,497][    INFO] Iters: 532, Total loss: 0.098, Loss x: 0.134, Loss s: 0.109, Loss w_fp: 0.015, Mask ratio: 0.573
+[2023-08-30 22:38:52,819][    INFO] Iters: 608, Total loss: 0.098, Loss x: 0.134, Loss s: 0.109, Loss w_fp: 0.015, Mask ratio: 0.572
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.54
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.10
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.55
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.20
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.55
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.64
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.00
+[2023-08-30 22:40:12,870][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.80
+
+[2023-08-30 22:40:13,992][    INFO] ===========> Epoch: 59, LR: 0.00030, Previous best: 47.90
+[2023-08-30 22:40:15,051][    INFO] Iters: 0, Total loss: 0.078, Loss x: 0.110, Loss s: 0.086, Loss w_fp: 0.006, Mask ratio: 0.666
+[2023-08-30 22:41:03,259][    INFO] Iters: 76, Total loss: 0.093, Loss x: 0.131, Loss s: 0.098, Loss w_fp: 0.012, Mask ratio: 0.573
+[2023-08-30 22:41:51,863][    INFO] Iters: 152, Total loss: 0.094, Loss x: 0.131, Loss s: 0.100, Loss w_fp: 0.013, Mask ratio: 0.558
+[2023-08-30 22:42:40,236][    INFO] Iters: 228, Total loss: 0.097, Loss x: 0.134, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.548
+[2023-08-30 22:43:28,649][    INFO] Iters: 304, Total loss: 0.098, Loss x: 0.137, Loss s: 0.104, Loss w_fp: 0.013, Mask ratio: 0.555
+[2023-08-30 22:44:17,154][    INFO] Iters: 380, Total loss: 0.098, Loss x: 0.138, Loss s: 0.101, Loss w_fp: 0.013, Mask ratio: 0.553
+[2023-08-30 22:45:05,653][    INFO] Iters: 456, Total loss: 0.098, Loss x: 0.137, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.562
+[2023-08-30 22:45:54,263][    INFO] Iters: 532, Total loss: 0.099, Loss x: 0.139, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.562
+[2023-08-30 22:46:42,873][    INFO] Iters: 608, Total loss: 0.098, Loss x: 0.138, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.561
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 41.52
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 47.98
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.25
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 66.03
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.03
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 32.84
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.48
+[2023-08-30 22:48:03,756][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.02
+
+[2023-08-30 22:48:04,810][    INFO] ===========> Epoch: 60, LR: 0.00029, Previous best: 47.90
+[2023-08-30 22:48:05,890][    INFO] Iters: 0, Total loss: 0.095, Loss x: 0.159, Loss s: 0.056, Loss w_fp: 0.005, Mask ratio: 0.676
+[2023-08-30 22:48:54,117][    INFO] Iters: 76, Total loss: 0.099, Loss x: 0.139, Loss s: 0.104, Loss w_fp: 0.016, Mask ratio: 0.559
+[2023-08-30 22:49:42,473][    INFO] Iters: 152, Total loss: 0.099, Loss x: 0.136, Loss s: 0.109, Loss w_fp: 0.016, Mask ratio: 0.569
+[2023-08-30 22:50:31,397][    INFO] Iters: 228, Total loss: 0.098, Loss x: 0.134, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.575
+[2023-08-30 22:51:20,009][    INFO] Iters: 304, Total loss: 0.097, Loss x: 0.134, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.567
+[2023-08-30 22:52:09,041][    INFO] Iters: 380, Total loss: 0.096, Loss x: 0.133, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.569
+[2023-08-30 22:52:57,651][    INFO] Iters: 456, Total loss: 0.097, Loss x: 0.136, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.577
+[2023-08-30 22:53:46,518][    INFO] Iters: 532, Total loss: 0.096, Loss x: 0.135, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.572
+[2023-08-30 22:54:35,396][    INFO] Iters: 608, Total loss: 0.097, Loss x: 0.135, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.574
+[2023-08-30 22:55:56,582][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.52
+[2023-08-30 22:55:56,582][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.06
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.00
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.91
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.86
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.53
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.39
+[2023-08-30 22:55:56,583][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.90
+
+[2023-08-30 22:55:57,680][    INFO] ===========> Epoch: 61, LR: 0.00027, Previous best: 47.90
+[2023-08-30 22:55:58,683][    INFO] Iters: 0, Total loss: 0.041, Loss x: 0.067, Loss s: 0.027, Loss w_fp: 0.003, Mask ratio: 0.390
+[2023-08-30 22:56:47,140][    INFO] Iters: 76, Total loss: 0.101, Loss x: 0.134, Loss s: 0.118, Loss w_fp: 0.015, Mask ratio: 0.593
+[2023-08-30 22:57:35,939][    INFO] Iters: 152, Total loss: 0.098, Loss x: 0.130, Loss s: 0.114, Loss w_fp: 0.016, Mask ratio: 0.590
+[2023-08-30 22:58:24,824][    INFO] Iters: 228, Total loss: 0.099, Loss x: 0.131, Loss s: 0.119, Loss w_fp: 0.016, Mask ratio: 0.581
+[2023-08-30 22:59:13,842][    INFO] Iters: 304, Total loss: 0.099, Loss x: 0.131, Loss s: 0.119, Loss w_fp: 0.016, Mask ratio: 0.586
+[2023-08-30 23:00:02,819][    INFO] Iters: 380, Total loss: 0.100, Loss x: 0.131, Loss s: 0.124, Loss w_fp: 0.015, Mask ratio: 0.574
+[2023-08-30 23:00:51,810][    INFO] Iters: 456, Total loss: 0.100, Loss x: 0.131, Loss s: 0.124, Loss w_fp: 0.015, Mask ratio: 0.571
+[2023-08-30 23:01:40,827][    INFO] Iters: 532, Total loss: 0.100, Loss x: 0.131, Loss s: 0.123, Loss w_fp: 0.015, Mask ratio: 0.573
+[2023-08-30 23:02:30,141][    INFO] Iters: 608, Total loss: 0.100, Loss x: 0.131, Loss s: 0.121, Loss w_fp: 0.016, Mask ratio: 0.573
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 44.94
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.90
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.60
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.14
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.28
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.81
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 54.00
+[2023-08-30 23:03:50,740][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.38
+
+[2023-08-30 23:03:51,849][    INFO] ===========> Epoch: 62, LR: 0.00026, Previous best: 47.90
+[2023-08-30 23:03:52,885][    INFO] Iters: 0, Total loss: 0.091, Loss x: 0.149, Loss s: 0.055, Loss w_fp: 0.010, Mask ratio: 0.881
+[2023-08-30 23:04:41,625][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.140, Loss s: 0.091, Loss w_fp: 0.013, Mask ratio: 0.617
+[2023-08-30 23:05:30,772][    INFO] Iters: 152, Total loss: 0.096, Loss x: 0.137, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.602
+[2023-08-30 23:06:19,813][    INFO] Iters: 228, Total loss: 0.095, Loss x: 0.134, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.590
+[2023-08-30 23:07:09,283][    INFO] Iters: 304, Total loss: 0.095, Loss x: 0.133, Loss s: 0.102, Loss w_fp: 0.014, Mask ratio: 0.581
+[2023-08-30 23:07:58,545][    INFO] Iters: 380, Total loss: 0.097, Loss x: 0.133, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.576
+[2023-08-30 23:08:47,760][    INFO] Iters: 456, Total loss: 0.097, Loss x: 0.132, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.577
+[2023-08-30 23:09:37,011][    INFO] Iters: 532, Total loss: 0.097, Loss x: 0.132, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.579
+[2023-08-30 23:10:26,462][    INFO] Iters: 608, Total loss: 0.096, Loss x: 0.131, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.581
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 43.09
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.22
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.96
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 69.14
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 20.45
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.79
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.74
+[2023-08-30 23:11:47,725][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.77
+
+[2023-08-30 23:11:48,785][    INFO] ===========> Epoch: 63, LR: 0.00025, Previous best: 47.90
+[2023-08-30 23:11:49,835][    INFO] Iters: 0, Total loss: 0.072, Loss x: 0.124, Loss s: 0.030, Loss w_fp: 0.008, Mask ratio: 0.405
+[2023-08-30 23:12:38,902][    INFO] Iters: 76, Total loss: 0.091, Loss x: 0.125, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.554
+[2023-08-30 23:13:28,249][    INFO] Iters: 152, Total loss: 0.096, Loss x: 0.137, Loss s: 0.095, Loss w_fp: 0.015, Mask ratio: 0.554
+[2023-08-30 23:14:17,642][    INFO] Iters: 228, Total loss: 0.094, Loss x: 0.134, Loss s: 0.095, Loss w_fp: 0.014, Mask ratio: 0.562
+[2023-08-30 23:15:07,211][    INFO] Iters: 304, Total loss: 0.095, Loss x: 0.134, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.554
+[2023-08-30 23:15:56,591][    INFO] Iters: 380, Total loss: 0.094, Loss x: 0.133, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.568
+[2023-08-30 23:16:46,244][    INFO] Iters: 456, Total loss: 0.096, Loss x: 0.133, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.564
+[2023-08-30 23:17:35,581][    INFO] Iters: 532, Total loss: 0.095, Loss x: 0.132, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.565
+[2023-08-30 23:18:24,967][    INFO] Iters: 608, Total loss: 0.095, Loss x: 0.132, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.566
+[2023-08-30 23:19:45,827][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 39.61
+[2023-08-30 23:19:45,827][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.45
+[2023-08-30 23:19:45,827][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.81
+[2023-08-30 23:19:45,827][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.22
+[2023-08-30 23:19:45,828][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.76
+[2023-08-30 23:19:45,828][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.34
+[2023-08-30 23:19:45,828][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.06
+[2023-08-30 23:19:45,828][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.46
+
+[2023-08-30 23:19:46,907][    INFO] ===========> Epoch: 64, LR: 0.00023, Previous best: 47.90
+[2023-08-30 23:19:47,933][    INFO] Iters: 0, Total loss: 0.106, Loss x: 0.179, Loss s: 0.051, Loss w_fp: 0.014, Mask ratio: 0.581
+[2023-08-30 23:20:37,152][    INFO] Iters: 76, Total loss: 0.094, Loss x: 0.130, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.552
+[2023-08-30 23:21:26,575][    INFO] Iters: 152, Total loss: 0.096, Loss x: 0.135, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.559
+[2023-08-30 23:22:16,035][    INFO] Iters: 228, Total loss: 0.097, Loss x: 0.133, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.569
+[2023-08-30 23:23:05,746][    INFO] Iters: 304, Total loss: 0.094, Loss x: 0.129, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.577
+[2023-08-30 23:23:55,367][    INFO] Iters: 380, Total loss: 0.092, Loss x: 0.127, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.578
+[2023-08-30 23:24:45,080][    INFO] Iters: 456, Total loss: 0.093, Loss x: 0.128, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.576
+[2023-08-30 23:25:34,511][    INFO] Iters: 532, Total loss: 0.093, Loss x: 0.127, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.576
+[2023-08-30 23:26:23,949][    INFO] Iters: 608, Total loss: 0.093, Loss x: 0.128, Loss s: 0.102, Loss w_fp: 0.016, Mask ratio: 0.574
+[2023-08-30 23:27:45,230][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 43.73
+[2023-08-30 23:27:45,230][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 49.89
+[2023-08-30 23:27:45,230][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 51.37
+[2023-08-30 23:27:45,230][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.28
+[2023-08-30 23:27:45,231][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.80
+[2023-08-30 23:27:45,231][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 36.07
+[2023-08-30 23:27:45,231][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.53
+[2023-08-30 23:27:45,231][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.67
+
+[2023-08-30 23:27:46,357][    INFO] ===========> Epoch: 65, LR: 0.00022, Previous best: 47.90
+[2023-08-30 23:27:47,425][    INFO] Iters: 0, Total loss: 0.064, Loss x: 0.078, Loss s: 0.097, Loss w_fp: 0.002, Mask ratio: 0.520
+[2023-08-30 23:28:36,931][    INFO] Iters: 76, Total loss: 0.090, Loss x: 0.121, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.568
+[2023-08-30 23:29:26,684][    INFO] Iters: 152, Total loss: 0.090, Loss x: 0.122, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.577
+[2023-08-30 23:30:16,343][    INFO] Iters: 228, Total loss: 0.090, Loss x: 0.124, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.575
+[2023-08-30 23:31:06,142][    INFO] Iters: 304, Total loss: 0.092, Loss x: 0.126, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.576
+[2023-08-30 23:31:56,004][    INFO] Iters: 380, Total loss: 0.091, Loss x: 0.127, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.581
+[2023-08-30 23:32:45,966][    INFO] Iters: 456, Total loss: 0.092, Loss x: 0.127, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.590
+[2023-08-30 23:33:35,794][    INFO] Iters: 532, Total loss: 0.092, Loss x: 0.128, Loss s: 0.099, Loss w_fp: 0.014, Mask ratio: 0.590
+[2023-08-30 23:34:25,708][    INFO] Iters: 608, Total loss: 0.092, Loss x: 0.127, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.591
+[2023-08-30 23:35:46,869][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 41.61
+[2023-08-30 23:35:46,869][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.43
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.44
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.06
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 21.32
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.89
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.09
+[2023-08-30 23:35:46,870][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.83
+
+[2023-08-30 23:35:47,965][    INFO] ===========> Epoch: 66, LR: 0.00021, Previous best: 47.90
+[2023-08-30 23:35:49,011][    INFO] Iters: 0, Total loss: 0.069, Loss x: 0.115, Loss s: 0.038, Loss w_fp: 0.008, Mask ratio: 0.536
+[2023-08-30 23:36:38,451][    INFO] Iters: 76, Total loss: 0.086, Loss x: 0.115, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.569
+[2023-08-30 23:37:28,437][    INFO] Iters: 152, Total loss: 0.091, Loss x: 0.124, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.581
+[2023-08-30 23:38:18,163][    INFO] Iters: 228, Total loss: 0.094, Loss x: 0.129, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.585
+[2023-08-30 23:39:08,067][    INFO] Iters: 304, Total loss: 0.094, Loss x: 0.130, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.586
+[2023-08-30 23:39:57,802][    INFO] Iters: 380, Total loss: 0.094, Loss x: 0.128, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.584
+[2023-08-30 23:40:47,712][    INFO] Iters: 456, Total loss: 0.093, Loss x: 0.126, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.575
+[2023-08-30 23:41:38,004][    INFO] Iters: 532, Total loss: 0.094, Loss x: 0.127, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.579
+[2023-08-30 23:42:27,925][    INFO] Iters: 608, Total loss: 0.094, Loss x: 0.126, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.581
+[2023-08-30 23:43:48,992][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 43.07
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.70
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.96
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.57
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.28
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 36.28
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 48.75
+[2023-08-30 23:43:48,993][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.66
+
+[2023-08-30 23:43:50,037][    INFO] ===========> Epoch: 67, LR: 0.00019, Previous best: 47.90
+[2023-08-30 23:43:51,125][    INFO] Iters: 0, Total loss: 0.104, Loss x: 0.182, Loss s: 0.045, Loss w_fp: 0.008, Mask ratio: 0.403
+[2023-08-30 23:44:40,943][    INFO] Iters: 76, Total loss: 0.090, Loss x: 0.129, Loss s: 0.087, Loss w_fp: 0.015, Mask ratio: 0.569
+[2023-08-30 23:45:31,029][    INFO] Iters: 152, Total loss: 0.092, Loss x: 0.128, Loss s: 0.096, Loss w_fp: 0.015, Mask ratio: 0.586
+[2023-08-30 23:46:20,926][    INFO] Iters: 228, Total loss: 0.090, Loss x: 0.125, Loss s: 0.098, Loss w_fp: 0.014, Mask ratio: 0.592
+[2023-08-30 23:47:11,143][    INFO] Iters: 304, Total loss: 0.091, Loss x: 0.126, Loss s: 0.097, Loss w_fp: 0.015, Mask ratio: 0.594
+[2023-08-30 23:48:00,844][    INFO] Iters: 380, Total loss: 0.091, Loss x: 0.126, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.590
+[2023-08-30 23:48:51,013][    INFO] Iters: 456, Total loss: 0.091, Loss x: 0.125, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.593
+[2023-08-30 23:49:41,234][    INFO] Iters: 532, Total loss: 0.093, Loss x: 0.127, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.593
+[2023-08-30 23:50:31,410][    INFO] Iters: 608, Total loss: 0.093, Loss x: 0.128, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.590
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.89
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.27
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.16
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.45
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.81
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.35
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 46.17
+[2023-08-30 23:51:53,171][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.30
+
+[2023-08-30 23:51:54,277][    INFO] ===========> Epoch: 68, LR: 0.00018, Previous best: 47.90
+[2023-08-30 23:51:55,353][    INFO] Iters: 0, Total loss: 0.050, Loss x: 0.071, Loss s: 0.040, Loss w_fp: 0.019, Mask ratio: 0.533
+[2023-08-30 23:52:45,130][    INFO] Iters: 76, Total loss: 0.085, Loss x: 0.114, Loss s: 0.097, Loss w_fp: 0.016, Mask ratio: 0.608
+[2023-08-30 23:53:35,326][    INFO] Iters: 152, Total loss: 0.091, Loss x: 0.128, Loss s: 0.094, Loss w_fp: 0.016, Mask ratio: 0.599
+[2023-08-30 23:54:25,538][    INFO] Iters: 228, Total loss: 0.090, Loss x: 0.126, Loss s: 0.093, Loss w_fp: 0.015, Mask ratio: 0.613
+[2023-08-30 23:55:15,724][    INFO] Iters: 304, Total loss: 0.092, Loss x: 0.127, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.607
+[2023-08-30 23:56:06,014][    INFO] Iters: 380, Total loss: 0.093, Loss x: 0.126, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-30 23:56:56,061][    INFO] Iters: 456, Total loss: 0.091, Loss x: 0.125, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-30 23:57:46,172][    INFO] Iters: 532, Total loss: 0.092, Loss x: 0.127, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.596
+[2023-08-30 23:58:36,392][    INFO] Iters: 608, Total loss: 0.092, Loss x: 0.127, Loss s: 0.100, Loss w_fp: 0.014, Mask ratio: 0.593
+[2023-08-30 23:59:57,557][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 41.58
+[2023-08-30 23:59:57,557][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.66
+[2023-08-30 23:59:57,557][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.68
+[2023-08-30 23:59:57,558][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 65.59
+[2023-08-30 23:59:57,558][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.10
+[2023-08-30 23:59:57,558][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.71
+[2023-08-30 23:59:57,558][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.70
+[2023-08-30 23:59:57,558][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.00
+
+[2023-08-30 23:59:58,608][    INFO] ===========> Epoch: 69, LR: 0.00017, Previous best: 47.90
+[2023-08-30 23:59:59,649][    INFO] Iters: 0, Total loss: 0.064, Loss x: 0.100, Loss s: 0.053, Loss w_fp: 0.003, Mask ratio: 0.771
+[2023-08-31 00:00:49,721][    INFO] Iters: 76, Total loss: 0.093, Loss x: 0.113, Loss s: 0.133, Loss w_fp: 0.014, Mask ratio: 0.603
+[2023-08-31 00:01:39,841][    INFO] Iters: 152, Total loss: 0.086, Loss x: 0.111, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.608
+[2023-08-31 00:02:29,898][    INFO] Iters: 228, Total loss: 0.088, Loss x: 0.115, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-31 00:03:20,228][    INFO] Iters: 304, Total loss: 0.090, Loss x: 0.118, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-31 00:04:10,570][    INFO] Iters: 380, Total loss: 0.090, Loss x: 0.119, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.600
+[2023-08-31 00:05:00,710][    INFO] Iters: 456, Total loss: 0.088, Loss x: 0.117, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-31 00:05:51,070][    INFO] Iters: 532, Total loss: 0.090, Loss x: 0.120, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-31 00:06:41,335][    INFO] Iters: 608, Total loss: 0.089, Loss x: 0.119, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.593
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.97
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 50.86
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.75
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.68
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.56
+[2023-08-31 00:08:02,922][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.07
+[2023-08-31 00:08:02,923][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 45.50
+[2023-08-31 00:08:02,923][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 44.91
+
+[2023-08-31 00:08:03,993][    INFO] ===========> Epoch: 70, LR: 0.00015, Previous best: 47.90
+[2023-08-31 00:08:05,006][    INFO] Iters: 0, Total loss: 0.103, Loss x: 0.149, Loss s: 0.110, Loss w_fp: 0.005, Mask ratio: 0.783
+[2023-08-31 00:08:54,839][    INFO] Iters: 76, Total loss: 0.086, Loss x: 0.115, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.551
+[2023-08-31 00:09:45,178][    INFO] Iters: 152, Total loss: 0.093, Loss x: 0.121, Loss s: 0.114, Loss w_fp: 0.016, Mask ratio: 0.576
+[2023-08-31 00:10:35,502][    INFO] Iters: 228, Total loss: 0.091, Loss x: 0.119, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.581
+[2023-08-31 00:11:25,971][    INFO] Iters: 304, Total loss: 0.091, Loss x: 0.121, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.582
+[2023-08-31 00:12:16,441][    INFO] Iters: 380, Total loss: 0.091, Loss x: 0.121, Loss s: 0.106, Loss w_fp: 0.014, Mask ratio: 0.581
+[2023-08-31 00:13:06,877][    INFO] Iters: 456, Total loss: 0.093, Loss x: 0.124, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.580
+[2023-08-31 00:13:57,324][    INFO] Iters: 532, Total loss: 0.092, Loss x: 0.123, Loss s: 0.110, Loss w_fp: 0.014, Mask ratio: 0.576
+[2023-08-31 00:14:47,732][    INFO] Iters: 608, Total loss: 0.093, Loss x: 0.124, Loss s: 0.108, Loss w_fp: 0.014, Mask ratio: 0.573
+[2023-08-31 00:16:09,619][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 50.81
+[2023-08-31 00:16:09,619][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.81
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.85
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.37
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.37
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 31.15
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 47.43
+[2023-08-31 00:16:09,620][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.54
+
+[2023-08-31 00:16:10,772][    INFO] ===========> Epoch: 71, LR: 0.00014, Previous best: 47.90
+[2023-08-31 00:16:11,853][    INFO] Iters: 0, Total loss: 0.091, Loss x: 0.150, Loss s: 0.058, Loss w_fp: 0.007, Mask ratio: 0.670
+[2023-08-31 00:17:01,940][    INFO] Iters: 76, Total loss: 0.093, Loss x: 0.121, Loss s: 0.110, Loss w_fp: 0.019, Mask ratio: 0.608
+[2023-08-31 00:17:51,975][    INFO] Iters: 152, Total loss: 0.093, Loss x: 0.123, Loss s: 0.110, Loss w_fp: 0.017, Mask ratio: 0.589
+[2023-08-31 00:18:42,359][    INFO] Iters: 228, Total loss: 0.094, Loss x: 0.127, Loss s: 0.106, Loss w_fp: 0.016, Mask ratio: 0.590
+[2023-08-31 00:19:32,805][    INFO] Iters: 304, Total loss: 0.093, Loss x: 0.126, Loss s: 0.106, Loss w_fp: 0.016, Mask ratio: 0.591
+[2023-08-31 00:20:23,296][    INFO] Iters: 380, Total loss: 0.094, Loss x: 0.128, Loss s: 0.104, Loss w_fp: 0.016, Mask ratio: 0.594
+[2023-08-31 00:21:13,726][    INFO] Iters: 456, Total loss: 0.093, Loss x: 0.126, Loss s: 0.103, Loss w_fp: 0.016, Mask ratio: 0.591
+[2023-08-31 00:22:03,967][    INFO] Iters: 532, Total loss: 0.093, Loss x: 0.127, Loss s: 0.102, Loss w_fp: 0.016, Mask ratio: 0.587
+[2023-08-31 00:22:54,420][    INFO] Iters: 608, Total loss: 0.091, Loss x: 0.125, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.586
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.89
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 51.02
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 48.78
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.96
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.49
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.76
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.06
+[2023-08-31 00:24:16,397][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.85
+
+[2023-08-31 00:24:17,498][    INFO] ===========> Epoch: 72, LR: 0.00013, Previous best: 47.90
+[2023-08-31 00:24:18,518][    INFO] Iters: 0, Total loss: 0.037, Loss x: 0.037, Loss s: 0.065, Loss w_fp: 0.008, Mask ratio: 0.801
+[2023-08-31 00:25:08,688][    INFO] Iters: 76, Total loss: 0.090, Loss x: 0.129, Loss s: 0.087, Loss w_fp: 0.015, Mask ratio: 0.545
+[2023-08-31 00:25:59,147][    INFO] Iters: 152, Total loss: 0.093, Loss x: 0.131, Loss s: 0.097, Loss w_fp: 0.014, Mask ratio: 0.568
+[2023-08-31 00:26:49,625][    INFO] Iters: 228, Total loss: 0.092, Loss x: 0.127, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.576
+[2023-08-31 00:27:40,219][    INFO] Iters: 304, Total loss: 0.093, Loss x: 0.126, Loss s: 0.104, Loss w_fp: 0.014, Mask ratio: 0.582
+[2023-08-31 00:28:30,674][    INFO] Iters: 380, Total loss: 0.093, Loss x: 0.127, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.586
+[2023-08-31 00:29:21,143][    INFO] Iters: 456, Total loss: 0.093, Loss x: 0.126, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.585
+[2023-08-31 00:30:11,511][    INFO] Iters: 532, Total loss: 0.093, Loss x: 0.126, Loss s: 0.105, Loss w_fp: 0.015, Mask ratio: 0.589
+[2023-08-31 00:31:02,005][    INFO] Iters: 608, Total loss: 0.093, Loss x: 0.127, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.589
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.19
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.06
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.68
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.80
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 24.51
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.56
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.62
+[2023-08-31 00:32:23,815][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.63
+
+[2023-08-31 00:32:24,873][    INFO] ===========> Epoch: 73, LR: 0.00011, Previous best: 47.90
+[2023-08-31 00:32:25,864][    INFO] Iters: 0, Total loss: 0.062, Loss x: 0.088, Loss s: 0.061, Loss w_fp: 0.011, Mask ratio: 0.535
+[2023-08-31 00:33:16,124][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.124, Loss s: 0.119, Loss w_fp: 0.018, Mask ratio: 0.589
+[2023-08-31 00:34:06,719][    INFO] Iters: 152, Total loss: 0.091, Loss x: 0.119, Loss s: 0.109, Loss w_fp: 0.016, Mask ratio: 0.604
+[2023-08-31 00:34:57,062][    INFO] Iters: 228, Total loss: 0.089, Loss x: 0.121, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.612
+[2023-08-31 00:35:47,414][    INFO] Iters: 304, Total loss: 0.088, Loss x: 0.118, Loss s: 0.101, Loss w_fp: 0.016, Mask ratio: 0.611
+[2023-08-31 00:36:38,256][    INFO] Iters: 380, Total loss: 0.088, Loss x: 0.119, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.603
+[2023-08-31 00:37:28,673][    INFO] Iters: 456, Total loss: 0.088, Loss x: 0.119, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.604
+[2023-08-31 00:38:19,386][    INFO] Iters: 532, Total loss: 0.088, Loss x: 0.119, Loss s: 0.100, Loss w_fp: 0.015, Mask ratio: 0.604
+[2023-08-31 00:39:10,021][    INFO] Iters: 608, Total loss: 0.089, Loss x: 0.120, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.602
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 50.48
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 54.60
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.90
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.55
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.61
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.89
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.46
+[2023-08-31 00:40:31,625][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.07
+
+[2023-08-31 00:40:32,731][    INFO] ===========> Epoch: 74, LR: 0.00010, Previous best: 47.90
+[2023-08-31 00:40:33,829][    INFO] Iters: 0, Total loss: 0.127, Loss x: 0.103, Loss s: 0.270, Loss w_fp: 0.033, Mask ratio: 0.741
+[2023-08-31 00:41:24,021][    INFO] Iters: 76, Total loss: 0.097, Loss x: 0.135, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.592
+[2023-08-31 00:42:14,536][    INFO] Iters: 152, Total loss: 0.094, Loss x: 0.129, Loss s: 0.103, Loss w_fp: 0.013, Mask ratio: 0.597
+[2023-08-31 00:43:05,163][    INFO] Iters: 228, Total loss: 0.095, Loss x: 0.130, Loss s: 0.105, Loss w_fp: 0.014, Mask ratio: 0.602
+[2023-08-31 00:43:55,785][    INFO] Iters: 304, Total loss: 0.095, Loss x: 0.129, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.599
+[2023-08-31 00:44:46,424][    INFO] Iters: 380, Total loss: 0.093, Loss x: 0.127, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.602
+[2023-08-31 00:45:37,039][    INFO] Iters: 456, Total loss: 0.092, Loss x: 0.125, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.597
+[2023-08-31 00:46:27,751][    INFO] Iters: 532, Total loss: 0.092, Loss x: 0.125, Loss s: 0.102, Loss w_fp: 0.015, Mask ratio: 0.594
+[2023-08-31 00:47:18,348][    INFO] Iters: 608, Total loss: 0.091, Loss x: 0.125, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.594
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.66
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.28
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.12
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.56
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 18.12
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.35
+[2023-08-31 00:48:40,234][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 51.68
+[2023-08-31 00:48:40,235][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.25
+
+[2023-08-31 00:48:41,312][    INFO] ===========> Epoch: 75, LR: 0.00008, Previous best: 47.90
+[2023-08-31 00:48:42,368][    INFO] Iters: 0, Total loss: 0.093, Loss x: 0.158, Loss s: 0.054, Loss w_fp: 0.003, Mask ratio: 0.501
+[2023-08-31 00:49:32,656][    INFO] Iters: 76, Total loss: 0.091, Loss x: 0.120, Loss s: 0.109, Loss w_fp: 0.013, Mask ratio: 0.608
+[2023-08-31 00:50:23,467][    INFO] Iters: 152, Total loss: 0.091, Loss x: 0.117, Loss s: 0.113, Loss w_fp: 0.016, Mask ratio: 0.609
+[2023-08-31 00:51:14,273][    INFO] Iters: 228, Total loss: 0.090, Loss x: 0.117, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.606
+[2023-08-31 00:52:04,944][    INFO] Iters: 304, Total loss: 0.089, Loss x: 0.117, Loss s: 0.107, Loss w_fp: 0.015, Mask ratio: 0.609
+[2023-08-31 00:52:55,685][    INFO] Iters: 380, Total loss: 0.089, Loss x: 0.118, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.603
+[2023-08-31 00:53:46,394][    INFO] Iters: 456, Total loss: 0.090, Loss x: 0.119, Loss s: 0.107, Loss w_fp: 0.014, Mask ratio: 0.598
+[2023-08-31 00:54:37,215][    INFO] Iters: 532, Total loss: 0.090, Loss x: 0.120, Loss s: 0.104, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-31 00:55:27,921][    INFO] Iters: 608, Total loss: 0.090, Loss x: 0.121, Loss s: 0.103, Loss w_fp: 0.014, Mask ratio: 0.602
+[2023-08-31 00:56:50,372][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 51.41
+[2023-08-31 00:56:50,372][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.57
+[2023-08-31 00:56:50,372][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.76
+[2023-08-31 00:56:50,372][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.12
+[2023-08-31 00:56:50,372][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 22.24
+[2023-08-31 00:56:50,373][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 33.70
+[2023-08-31 00:56:50,373][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 53.31
+[2023-08-31 00:56:50,373][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 47.30
+
+[2023-08-31 00:56:51,460][    INFO] ===========> Epoch: 76, LR: 0.00007, Previous best: 47.90
+[2023-08-31 00:56:52,522][    INFO] Iters: 0, Total loss: 0.087, Loss x: 0.121, Loss s: 0.100, Loss w_fp: 0.007, Mask ratio: 0.554
+[2023-08-31 00:57:42,840][    INFO] Iters: 76, Total loss: 0.088, Loss x: 0.121, Loss s: 0.095, Loss w_fp: 0.015, Mask ratio: 0.590
+[2023-08-31 00:58:33,671][    INFO] Iters: 152, Total loss: 0.088, Loss x: 0.118, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.592
+[2023-08-31 00:59:24,427][    INFO] Iters: 228, Total loss: 0.088, Loss x: 0.119, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-31 01:00:15,321][    INFO] Iters: 304, Total loss: 0.087, Loss x: 0.117, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.606
+[2023-08-31 01:01:06,133][    INFO] Iters: 380, Total loss: 0.089, Loss x: 0.120, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.604
+[2023-08-31 01:01:57,010][    INFO] Iters: 456, Total loss: 0.089, Loss x: 0.120, Loss s: 0.103, Loss w_fp: 0.015, Mask ratio: 0.600
+[2023-08-31 01:02:47,793][    INFO] Iters: 532, Total loss: 0.089, Loss x: 0.120, Loss s: 0.101, Loss w_fp: 0.015, Mask ratio: 0.600
+[2023-08-31 01:03:38,690][    INFO] Iters: 608, Total loss: 0.088, Loss x: 0.119, Loss s: 0.099, Loss w_fp: 0.014, Mask ratio: 0.602
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.65
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.28
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.53
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.87
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 15.88
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.24
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.26
+[2023-08-31 01:05:00,680][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.67
+
+[2023-08-31 01:05:01,723][    INFO] ===========> Epoch: 77, LR: 0.00005, Previous best: 47.90
+[2023-08-31 01:05:02,738][    INFO] Iters: 0, Total loss: 0.071, Loss x: 0.131, Loss s: 0.021, Loss w_fp: 0.001, Mask ratio: 0.453
+[2023-08-31 01:05:53,369][    INFO] Iters: 76, Total loss: 0.093, Loss x: 0.129, Loss s: 0.098, Loss w_fp: 0.017, Mask ratio: 0.599
+[2023-08-31 01:06:44,110][    INFO] Iters: 152, Total loss: 0.090, Loss x: 0.122, Loss s: 0.100, Loss w_fp: 0.016, Mask ratio: 0.612
+[2023-08-31 01:07:34,965][    INFO] Iters: 228, Total loss: 0.094, Loss x: 0.126, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.604
+[2023-08-31 01:08:26,055][    INFO] Iters: 304, Total loss: 0.093, Loss x: 0.124, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.588
+[2023-08-31 01:09:16,824][    INFO] Iters: 380, Total loss: 0.093, Loss x: 0.123, Loss s: 0.109, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-31 01:10:07,565][    INFO] Iters: 456, Total loss: 0.092, Loss x: 0.122, Loss s: 0.110, Loss w_fp: 0.015, Mask ratio: 0.601
+[2023-08-31 01:10:58,357][    INFO] Iters: 532, Total loss: 0.091, Loss x: 0.120, Loss s: 0.109, Loss w_fp: 0.014, Mask ratio: 0.601
+[2023-08-31 01:11:49,153][    INFO] Iters: 608, Total loss: 0.090, Loss x: 0.118, Loss s: 0.108, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-31 01:13:11,194][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 45.62
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.21
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 50.37
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 68.31
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 23.05
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 35.33
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 52.18
+[2023-08-31 01:13:11,195][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.87
+
+[2023-08-31 01:13:12,372][    INFO] ===========> Epoch: 78, LR: 0.00004, Previous best: 47.90
+[2023-08-31 01:13:13,417][    INFO] Iters: 0, Total loss: 0.139, Loss x: 0.243, Loss s: 0.058, Loss w_fp: 0.013, Mask ratio: 0.571
+[2023-08-31 01:14:03,976][    INFO] Iters: 76, Total loss: 0.086, Loss x: 0.115, Loss s: 0.099, Loss w_fp: 0.015, Mask ratio: 0.593
+[2023-08-31 01:14:54,500][    INFO] Iters: 152, Total loss: 0.089, Loss x: 0.121, Loss s: 0.101, Loss w_fp: 0.014, Mask ratio: 0.613
+[2023-08-31 01:15:45,454][    INFO] Iters: 228, Total loss: 0.087, Loss x: 0.118, Loss s: 0.097, Loss w_fp: 0.015, Mask ratio: 0.611
+[2023-08-31 01:16:36,319][    INFO] Iters: 304, Total loss: 0.087, Loss x: 0.118, Loss s: 0.096, Loss w_fp: 0.015, Mask ratio: 0.606
+[2023-08-31 01:17:27,363][    INFO] Iters: 380, Total loss: 0.087, Loss x: 0.119, Loss s: 0.094, Loss w_fp: 0.015, Mask ratio: 0.606
+[2023-08-31 01:18:18,166][    INFO] Iters: 456, Total loss: 0.087, Loss x: 0.118, Loss s: 0.096, Loss w_fp: 0.015, Mask ratio: 0.598
+[2023-08-31 01:19:08,847][    INFO] Iters: 532, Total loss: 0.087, Loss x: 0.117, Loss s: 0.098, Loss w_fp: 0.015, Mask ratio: 0.597
+[2023-08-31 01:19:59,843][    INFO] Iters: 608, Total loss: 0.088, Loss x: 0.119, Loss s: 0.100, Loss w_fp: 0.016, Mask ratio: 0.601
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 48.77
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 52.62
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.29
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.78
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 19.02
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.82
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 50.98
+[2023-08-31 01:21:21,672][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 46.18
+
+[2023-08-31 01:21:22,700][    INFO] ===========> Epoch: 79, LR: 0.00002, Previous best: 47.90
+[2023-08-31 01:21:23,820][    INFO] Iters: 0, Total loss: 0.021, Loss x: 0.032, Loss s: 0.015, Loss w_fp: 0.004, Mask ratio: 0.722
+[2023-08-31 01:22:14,442][    INFO] Iters: 76, Total loss: 0.096, Loss x: 0.120, Loss s: 0.131, Loss w_fp: 0.016, Mask ratio: 0.580
+[2023-08-31 01:23:05,094][    INFO] Iters: 152, Total loss: 0.089, Loss x: 0.112, Loss s: 0.116, Loss w_fp: 0.017, Mask ratio: 0.578
+[2023-08-31 01:23:56,276][    INFO] Iters: 228, Total loss: 0.089, Loss x: 0.114, Loss s: 0.113, Loss w_fp: 0.016, Mask ratio: 0.589
+[2023-08-31 01:24:47,033][    INFO] Iters: 304, Total loss: 0.090, Loss x: 0.116, Loss s: 0.111, Loss w_fp: 0.015, Mask ratio: 0.592
+[2023-08-31 01:25:37,974][    INFO] Iters: 380, Total loss: 0.089, Loss x: 0.116, Loss s: 0.107, Loss w_fp: 0.016, Mask ratio: 0.588
+[2023-08-31 01:26:28,866][    INFO] Iters: 456, Total loss: 0.089, Loss x: 0.117, Loss s: 0.106, Loss w_fp: 0.015, Mask ratio: 0.599
+[2023-08-31 01:27:19,990][    INFO] Iters: 532, Total loss: 0.092, Loss x: 0.118, Loss s: 0.114, Loss w_fp: 0.016, Mask ratio: 0.597
+[2023-08-31 01:28:11,116][    INFO] Iters: 608, Total loss: 0.092, Loss x: 0.120, Loss s: 0.112, Loss w_fp: 0.016, Mask ratio: 0.599
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [0 background] IoU: 47.88
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [1 building] IoU: 53.45
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [2 road] IoU: 49.39
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [3 water] IoU: 67.89
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [4 barren] IoU: 16.38
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [5 forest] IoU: 34.52
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation ***** >>>> Class [6 agricultural] IoU: 49.71
+[2023-08-31 01:29:33,217][    INFO] ***** Evaluation original ***** >>>> MeanIoU: 45.60
+
+/home/pzhang/.conda/envs/mmlab/lib/python3.8/site-packages/torch/distributed/launch.py:178: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
